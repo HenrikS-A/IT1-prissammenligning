@@ -13,14 +13,12 @@ def hent_api(soek, sidetall=None, merke=None, sortering=None):
     }
 
     authToken = "kl5WOZbtvjPcPpLLnKYABpyQ22DnWav7ORT4ARat"
-
     headers = {
             "Authorization": "Bearer " + authToken,
             "Content-Type": "application/json"
         }
   
     respons = requests.get(url, parametere, headers=headers)
-  
     data = respons.json()
 
     return data
