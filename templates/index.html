@@ -1,0 +1,27 @@
+{% extends 'mal.html' %}
+
+{% block tittel %} FORSIDE TEST! {% endblock %}
+
+{% block main %}
+    <h3>Her kommer hovedinnholdet</h3>
+
+
+    <p>{{ produkter["data"][0]["name"] }}</p>
+    <p>{{ produkter["data"][1]["name"] }}</p>
+    <p>{{ produkter["data"][2]["name"] }}</p>
+    <p>{{ produkter["data"][3]["name"] }}</p>
+    <p>{{ produkter["data"][4]["name"] }}</p>
+    <p>{{ produkter["data"][5]["name"] }}</p>
+    <p>{{ produkter["data"][6]["name"] }}</p>
+    <p>{{ produkter["data"][7]["name"] }}</p>
+    <p>{{ produkter["data"][8]["name"] }}</p>
+    <p>{{ produkter["data"][9]["name"] }}</p>
+    <p>{{ produkter["data"][10]["name"] }}</p>
+    <p>{{ produkter["data"][11]["name"] }}</p>
+    <p>{{ produkter["data"][12]["name"] }}</p>
+
+
+    <p>{{ produkter["data"][0]["current_price"] }}</p>
+    <p>{{ produkter["data"][0]["price_history"] }}</p>
+    <p>{{ produkter["data"][0]["nutrition"] }}</p>
+{% endblock %}
