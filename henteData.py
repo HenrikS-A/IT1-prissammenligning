@@ -1,7 +1,7 @@
 import requests
 
 # sidetall, merke og sortering er valgfrie argumenter (optional arguments) som har startverdien None
-def hent_api(soek, sidetall=None, merke=None, sortering=None):
+def hent_data(soek, sidetall=None, merke=None, sortering=None):
     url = "https://kassal.app/api/v1/products"
 
     parametere = {
@@ -9,7 +9,7 @@ def hent_api(soek, sidetall=None, merke=None, sortering=None):
         "page": sidetall,
         "size": 15,
         "brand": merke,
-        "sort": sortering,
+        "sort": sortering
     }
 
     authToken = "kl5WOZbtvjPcPpLLnKYABpyQ22DnWav7ORT4ARat"
