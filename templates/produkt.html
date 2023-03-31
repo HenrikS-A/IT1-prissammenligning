@@ -1,0 +1,5 @@
+{% extends 'mal.html' %}
+
+{% block main %}
+    {{ produkt["products"][0]["name"] }} - {{ produkt["products"][0]["current_price"]["price"] }} - {{ produkt["products"][0]["vendor"] }}
+{% endblock %}

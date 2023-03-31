@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from henteData import hent_data
+from henteData import hent_data, hent_data_ean
 
 app = Flask(__name__)
 
@@ -20,7 +20,10 @@ def rute_produkter():
 
     return render_template("produktene.html", soek=s, produkter=produkter["data"])
 
-
+@app.get("/produkt/<ean>")
+def rute_produkt(ean):
+    produkt = hent_data_ean(ean)
+    return render_template("produkt.html", ean=ean, produkt=produkt["data"])
 
 
 
