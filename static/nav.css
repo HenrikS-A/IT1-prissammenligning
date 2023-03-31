@@ -6,29 +6,35 @@
 }
 
 header {
-    padding: 20px;
+    padding: 25px;
     background-color: rgb(8, 41, 57);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-nav {
+header nav {
     text-align: center;
 }
-a {
-    padding: 10px;
-
+header a {
+    padding: 8px 16px 8px 16px;
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 300;
     font-size: 16px;
 
 }
 
+#loggInn {
+    color: white;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
 
-
-
-
-main {
-    border-top: white solid 4px;
 }
+
+
+
 
