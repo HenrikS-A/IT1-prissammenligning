@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
-from henteData import hent_data, hent_data_ean
+from henteData import hent_data, hent_data_ean, hent_butikker
+from finnPosisjon import finn_posisjon
 
 app = Flask(__name__)
 
@@ -25,6 +26,18 @@ def rute_produkt(ean):
     produkt = hent_data_ean(ean)
     return render_template("produkt.html", ean=ean, produkt=produkt["data"])
 
+
+
+
+@app.get("/butikker")
+def rute_butikker():
+
+    posisjon = finn_posisjon()
+    koordinater = [posisjon["location"]["latitude"], posisjon["location"]["longitude"]]
+
+    butikker = hent_butikker(koordinater[0], koordinater[1], 15) # siste tallet er radius fra koordinatene der den skal lete etter butikker
+
+    return render_template("butikker.html", koordinater=koordinater, butikker=butikker["data"])
 
 
 

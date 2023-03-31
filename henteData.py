@@ -40,6 +40,31 @@ def hent_data_ean(ean):
     return data
 
 
+def hent_butikker(lat, lng, km=None):
+
+    url = "https://kassal.app/api/v1/physical-stores"
+
+    parametere = {
+        "size": 15,
+        "lat": lat,
+        "lng": lng,
+        "km": km
+    }
+
+    authToken = "kl5WOZbtvjPcPpLLnKYABpyQ22DnWav7ORT4ARat"
+    headers = {
+            "Authorization": "Bearer " + authToken,
+            "Content-Type": "application/json"
+        }
+  
+    respons = requests.get(url, parametere, headers=headers)
+    data = respons.json()
+
+    return data
+
+
+
+
 
 
 

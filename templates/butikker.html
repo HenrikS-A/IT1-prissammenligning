@@ -1,0 +1,11 @@
+{% extends 'mal.html' %}
+
+{% block main %}
+    {{ koordinater }}
+
+    {% for butikk in butikker %}
+        
+        <p> {{ butikk["name"] }} </p>
+
+    {% endfor %}
+{% endblock %}
