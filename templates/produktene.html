@@ -1,0 +1,15 @@
+{% extends 'mal.html' %}
+
+{% block main %}
+    <h1>Ditt søk: {{ soek }}</h1>
+
+    <p>{{ produkter[0]["name"] }} - {{ produkter[0]["current_price"] }}</p>
+
+    <br>
+
+    {% for produkt in produkter %}
+        
+        <p>{{ produkt["name"] }} - {{ produkt["current_price"] }}</p>
+
+    {% endfor %}
+{% endblock %}
