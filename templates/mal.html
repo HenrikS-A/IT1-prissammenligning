@@ -12,16 +12,19 @@
 
     <link rel="stylesheet" href="{{ url_for('static',filename='nav.css') }}">
     
+    <link rel="stylesheet" href="{{ url_for('static',filename='style-index.css' ) }}">
+    
+    
 </head>
 <body>
     <header>
         <nav>
-            <a href="/">Forside</a>
-            <a href="/produkter">Produktene</a>
-            <a href="/butikker">Butikker</a>
+            <a class="{{ 'aktivUnderside' if request.path == '/' else ''}}" href="/">Forside</a>
+            <a class="{{ 'aktivUnderside' if request.path == '/produkter' else ''}}"href="/produkter">Produktene</a>
+            <a class="{{ 'aktivUnderside' if request.path == '/butikker' else ''}}"href="/butikker">Butikker</a>
             <a href="">Favoritter</a>
         </nav>
-        <a id="loggInn" href="/logg-inn">LOGG INN!</a>
+        <a id="loggInn" href="/logg-inn">Logg inn</a>
 
     </header>
     <main>

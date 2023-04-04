@@ -3,14 +3,18 @@
 {% block tittel %} FORSIDE TEST! {% endblock %}
 
 {% block main %}
-    <h3>Her kommer hovedinnholdet</h3>
+    
 
 
     <form action="/produkter" method="get"> 
-        <h2>Søk blant tusenvis av dagligvarer og sammenlign priser</h2>
-
-        <input type="search" name="soek">
-        <button type="submit">Søk</button>
+        <label for="soek">Søk blant tusenvis av <br> dagligvarer og sammenlign priser</label>
+        <div id="soekefelt">
+            <input type="search" name="soek" autocomplete="off">
+            <button type="submit">
+                <img src="../static/bilder/search-icon.png" alt="Søk ikon">
+            </button>
+        </div>
+        
     </form> 
 
 

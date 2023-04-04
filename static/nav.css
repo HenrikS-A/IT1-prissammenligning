@@ -13,7 +13,7 @@ header {
     justify-content: center;
     position: relative;
 
-    border-bottom: 5px solid rgb(8, 41, 57);
+    /* border-bottom: 1px solid rgb(8, 41, 57);  /* VET IKKE OM JEG SKAL HA DENNE ELLER IKKE */
 }
 
 header nav {
@@ -26,7 +26,9 @@ header a {
     text-transform: uppercase;
     font-weight: 300;
     font-size: 16px;
-
+}
+header a:hover{
+    border-bottom: solid 3px rgb(8, 41, 57);
 }
 
 #loggInn {
@@ -34,9 +36,13 @@ header a {
     position: absolute;
     right: 0;
     margin-right: 20px;
+    align-items: center;
 
 }
 
+.aktivUnderside {
+    border-bottom: solid 3px rgb(8, 41, 57);
+}
 
 
 
