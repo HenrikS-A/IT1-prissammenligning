@@ -7,7 +7,7 @@ def hent_data(soek=None, sidetall=None, merke=None, sortering=None):
     parametere = {
         "search": soek,
         "page": sidetall,
-        "size": 100,
+        "size": 7,
         "brand": merke,
         "sort": sortering
     }
@@ -26,7 +26,7 @@ def hent_data(soek=None, sidetall=None, merke=None, sortering=None):
 
 def hent_data_ean(ean):
 
-    url = f"https://kassal.app/api/v1/products/ean/{ean}"
+    url = f"https://kassal.app/api/v1/products/ean/{ean}" # Annen måte å legge inn parametere
 
     authToken = "kl5WOZbtvjPcPpLLnKYABpyQ22DnWav7ORT4ARat"
     headers = {
@@ -45,7 +45,7 @@ def hent_butikker(lat, lng, km=None):
     url = "https://kassal.app/api/v1/physical-stores"
 
     parametere = {
-        "size": 15,
+        "size": 30,
         "lat": lat,
         "lng": lng,
         "km": km

@@ -1,7 +1,6 @@
 import requests
 
-# Jeg vet at denne finner posisjonen til serveren, men tenker det er bra nok for dette prosjektet 
-# siden du kjører serveren på pc-en din. 
+# Denne finner posisjonen til ip-adressen til serveren
 
 def finn_posisjon():
     url = "https://api.ipregistry.co"

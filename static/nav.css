@@ -1,17 +1,19 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: rgb(8, 41, 57);
+    background-color: rgb(247, 246, 244);
     font-family: 'Ubuntu', sans-serif;
 }
 
 header {
     padding: 25px;
-    background-color: rgb(8, 41, 57);
+    background-color: rgb(247, 246, 244);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+
+    border-bottom: 5px solid rgb(8, 41, 57);
 }
 
 header nav {
@@ -20,7 +22,7 @@ header nav {
 header a {
     padding: 8px 16px 8px 16px;
     text-decoration: none;
-    color: white;
+    color: rgb(8, 41, 57);
     text-transform: uppercase;
     font-weight: 300;
     font-size: 16px;
@@ -28,7 +30,7 @@ header a {
 }
 
 #loggInn {
-    color: white;
+    color: rgb(8, 41, 57);
     position: absolute;
     right: 0;
     margin-right: 20px;

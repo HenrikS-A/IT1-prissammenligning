@@ -6,17 +6,18 @@ import json
 app = Flask(__name__)
 
 
+# Fungerer ikke, må se nermere på dette.
 
-fil_historikk = open("historikk.json")
-historikk = json.load(fil_historikk)
-fil_historikk.close()
+# fil_historikk = open("historikk.json")
+# historikk = json.load(fil_historikk)
+# fil_historikk.close()
 
-historikk_liste = []
+# historikk_liste = []
 
-def lagre_historikk():
-    fil_historikk = open("historikk.json", "w") # Åpner filen slik at jeg kan skrive ting inn i den.
-    json.dump(historikk_liste, fil_historikk)
-    fil_historikk.close()
+# def lagre_historikk():
+#     fil_historikk = open("historikk.json", "w") # Åpner filen slik at jeg kan skrive ting inn i den.
+#     json.dump(historikk_liste, fil_historikk)
+#     fil_historikk.close()
 
 
 
@@ -28,20 +29,21 @@ def index():
 
 @app.get("/produkter")
 def rute_produkter():
-    s=request.args["soek"]
 
-    historikk_liste.append(s)
-    lagre_historikk()
+    # Den ser om jeg har skrevet inn et søk eller bare vil til produktsiden. Jeg har et søk når vi har argumentet "soek".
+    try:
+        s = request.args["soek"]
+    except KeyError:
+        s = None
 
-    produkter = hent_data(s, sortering="price_desc") # Her er s søket bruker skriver inn
+    produkter = hent_data(s, sortering="price_asc")
+
+
+    # historikk_liste.append(s)
+    # lagre_historikk()
+
 
     return render_template("produktene.html", soek=s, produkter=produkter["data"])
-
-
-@app.get("/produktene")
-def rute_produktene():
-    produkter = hent_data(sortering="price_desc")
-    return render_template("produktene.html", produkter=produkter["data"])
 
 
 
@@ -59,7 +61,7 @@ def rute_butikker():
     posisjon = finn_posisjon()
     koordinater = [posisjon["location"]["latitude"], posisjon["location"]["longitude"]]
 
-    butikker = hent_butikker(koordinater[0], koordinater[1], 15) # siste tallet er radius fra koordinatene der den skal lete etter butikker
+    butikker = hent_butikker(koordinater[0], koordinater[1], 15) # Det siste tallet er radius fra koordinatene der den skal lete etter butikker
 
     return render_template("butikker.html", koordinater=koordinater, butikker=butikker["data"])
 
