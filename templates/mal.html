@@ -10,9 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ url_for('static',filename='nav.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
     
-    <link rel="stylesheet" href="{{ url_for('static',filename='style-index.css' ) }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='index.css' ) }}">
     
     
 </head>
@@ -33,7 +33,63 @@
         {% endblock %}
     </main>
     <footer>
-        <p>footer</p>
+        <h4>Prissammenligning av dagligvarer</h4>
+        <div id="footerFlex">
+            <section id="lenker">
+                <h3>Lenker</h3>
+                <div class="lenkerInnhold">
+                    <div>
+                        <a href="">Forside</a>
+                        <a href="">Produktene</a>
+                        <a href="">Butikker</a>
+                        <a href="">Favoritter</a>
+                    </div>
+                    <div>
+                        <a href="https://kassal.app/api" target="_blank">https://kassal.app/api</a>
+                        <a href="https://ipregistry.co/" target="_blank">https://ipregistry.co/</a>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Kontakt</h3>
+                <div class="kontaktInnhold">
+                    <div>
+                        <h5>Kontaktperson</h5>
+                        <p>Henrik Strøm-Andersen</p>
+                    
+                        <h5>Besøksadresse</h5>
+                        <p>Elias Smiths vei 15, <br>1337 Sandvika</p>
+                    </div>
+                    <div>
+                        <h5>Telefon</h5>
+                        <p>+47 123 45 678</p>
+                    
+                        <h5>E-post</h5>
+                        <p>henrikstro@viken.no</p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3>Følg oss</h3>
+                <div class="foelgInnhold">
+                    <a href="https://facebook.com" target="_blank">
+                        <img id="facebookLogo" src="../static/ikoner/facebook-logo.png" alt="Facebook logo">
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <img id="instagramLogo"src="../static/ikoner/instagram.png" alt="Instagram logo">
+                    </a>
+                    <a href="https://twitter.com" target="_blank">
+                        <img id="twitterLogo" src="../static/ikoner/twitter.png" alt="Twitter logo">
+                    </a>
+                    <a href="https://linkedin.com" target="_blank">
+                        <img id="linkedinLogo" src="../static/ikoner/linkedin.png" alt="Linked-in logo">
+                    </a>
+                </div>
+            </section>
+        </div>
+        
+        <p>2023, av Henrik</p>
+
     </footer>
 </body>
 </html>
