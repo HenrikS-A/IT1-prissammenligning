@@ -28,6 +28,9 @@ main {
 #soek input:focus {
     background-color: rgb(241, 240, 238);
 }
+#soek input::placeholder {
+    opacity: 0.5;
+}
 
 #soekefelt {
     position: relative;
