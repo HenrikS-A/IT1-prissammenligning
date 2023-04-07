@@ -4,12 +4,10 @@
 
 {% block main %}
     
-
-
-    <form action="/produkter" method="get"> 
+    <form id="soek" action="/produkter" method="get"> 
         <label for="soek">Søk blant tusenvis av <br> dagligvarer og sammenlign priser</label>
         <div id="soekefelt">
-            <input type="search" name="soek" autocomplete="off">
+            <input id="soekefeltet" type="search" name="soek" autocomplete="off">
             <button type="submit">
                 <img src="../static/ikoner/search-icon.png" alt="Søk ikon">
             </button>
@@ -44,6 +42,6 @@
 
 
 
-    
+    <script src="../static/script.js"></script>
     
 {% endblock %}
