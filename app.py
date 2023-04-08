@@ -39,7 +39,6 @@ def rute_produkter():
     produkter = hent_data(s, sortering="price_asc")
 
     # -------- DETTE FUNGERTE IKKE, prøvde å ikke vise de som ikke har 'data' --------
-
     # i = 0
     # for produkt in produkter["data"]:
         
