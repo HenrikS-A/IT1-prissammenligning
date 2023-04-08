@@ -25,11 +25,17 @@
             </div>
             
             <div class="produktInfo">
-                <h6>{{ produkt["brand"] }}</h6>
+                <h6>
+                    {% if produkt["brand"] != None %}
+                        {{ produkt["brand"] }}
+                    {% endif %}
+                </h6>
 
                 <h5>{{ produkt["name"] }}</h5>
 
-                <p>{{ produkt["current_price"] }},-</p>
+                <p>
+                    {{ produkt["current_price"] }},-
+                </p>
             </div>
         
         </a> 
