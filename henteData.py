@@ -7,8 +7,9 @@ def hent_data(soek=None, sidetall=None, merke=None, sortering=None):
     parametere = {
         "search": soek,
         "page": sidetall,
-        "size": 7,
+        "size": 9,
         "brand": merke,
+        "price_min": 15, # dette er for at produktene skal ha data
         "sort": sortering
     }
 

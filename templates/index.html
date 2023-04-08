@@ -1,6 +1,8 @@
 {% extends 'mal.html' %}
 
-{% block tittel %} FORSIDE TEST! {% endblock %}
+{% block tittel %}Forside{% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{{ url_for('static',filename='index.css' ) }}"> {% endblock %}
 
 {% block main %}
     
@@ -39,8 +41,6 @@
         <input type="submit" name="soek" value="Parmigiano Reggiano">
         <input type="submit" name="soek" value="Appelsinjuice">
     </form>
-
-
 
     <script src="../static/script.js"></script>
     

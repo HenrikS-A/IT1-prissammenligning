@@ -38,6 +38,34 @@ def rute_produkter():
 
     produkter = hent_data(s, sortering="price_asc")
 
+    # -------- DETTE FUNGERTE IKKE, prøvde å ikke vise de som ikke har 'data' --------
+
+    # i = 0
+    # for produkt in produkter["data"]:
+        
+    #     ean = produkt["ean"]
+    #     if ean == None:
+    #         del produkter["data"][i]
+
+    #     i += 1
+
+        
+    # for produkt in produkter["data"]:
+    #     print(produkt["ean"])
+
+
+    # for produkt in range(len( produkter["data"] )):
+    #     try:
+    #         hent_data_ean(produkter["data"][produkt]["ean"])
+    #     except KeyError:
+    #         del produkter["data"][produkt]
+    #         print("slett")
+
+    # for produkt in produkter["data"]:
+    #     print(produkt["ean"])
+
+    # ---------------
+
 
     # historikk_liste.append(s)
     # lagre_historikk()

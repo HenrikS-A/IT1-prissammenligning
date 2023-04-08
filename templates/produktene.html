@@ -1,22 +1,44 @@
 {% extends 'mal.html' %}
 
+{% block tittel %}Produkter{% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{{ url_for('static',filename='produktene.css' ) }}"> {% endblock %}
+
 {% block main %}
 
     {% if soek %}
         <h1>Ditt søk: {{ soek }}</h1>
+    {% else %}
+        <h1>Alle produkter</h1>
     {% endif %}
     
-
     <!-- <p>{{ produkter[0]["name"] }} - {{ produkter[0]["current_price"] }}</p> -->
 
-    <br>
 
-    {% for produkt in produkter %}
+    <div class="gridBox">
+        {% for produkt in produkter %}
         
         <a href="/produkt/{{ produkt['ean'] }}">
-            <p>{{ produkt["name"] }} - {{ produkt["current_price"] }}</p>
+            
+            <div class="produktbilde">
+                <img src="{{ produkt['image'] }}" alt="Produktbilde: {{ produkt['name'] }}">
+            </div>
+            
+            <div class="produktInfo">
+                <h6>{{ produkt["brand"] }}</h6>
+
+                <h5>{{ produkt["name"] }}</h5>
+
+                <p>{{ produkt["current_price"] }},-</p>
+            </div>
+        
         </a> 
         
 
-    {% endfor %}
+        {% endfor %}
+    </div>
+
+    
+
+
 {% endblock %}
