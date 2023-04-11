@@ -9,7 +9,7 @@ def hent_data(soek=None, sidetall=None, merke=None, sortering=None):
         "page": sidetall,
         "size": 9,
         "brand": merke,
-        "price_min": 15, # dette er for at produktene skal ha data
+        "price_min": 15, # dette er for at produktene skal ha data, priser under 15 har ikke data nesten...
         "sort": sortering
     }
 
