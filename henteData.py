@@ -7,7 +7,7 @@ def hent_data(soek=None, sidetall=None, merke=None, sortering=None):
     parametere = {
         "search": soek,
         "page": sidetall,
-        "size": 15,
+        "size": 2,
         "brand": merke,
         "price_min": 15, # for at produktene skal ha data, flesteparten av produktene under 15kr har ikke data...
         "sort": sortering
@@ -20,6 +20,8 @@ def hent_data(soek=None, sidetall=None, merke=None, sortering=None):
         }
   
     respons = requests.get(url, parametere, headers=headers)
+
+    print(respons.status_code)
     data = respons.json()
 
     return data
@@ -36,6 +38,8 @@ def hent_data_ean(ean):
         }
   
     respons = requests.get(url, headers=headers)
+
+    print(respons.status_code)
     data = respons.json()
 
     return data
@@ -46,7 +50,7 @@ def hent_butikker(lat, lng, km=None):
     url = "https://kassal.app/api/v1/physical-stores"
 
     parametere = {
-        "size": 30,
+        "size": 10,
         "lat": lat,
         "lng": lng,
         "km": km
@@ -59,6 +63,8 @@ def hent_butikker(lat, lng, km=None):
         }
   
     respons = requests.get(url, parametere, headers=headers)
+
+    print(respons.status_code)
     data = respons.json()
 
     return data

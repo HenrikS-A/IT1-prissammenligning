@@ -27,12 +27,23 @@
         
                 <a href="/produkt/{{ produkt['data']['ean'] }}">
 
-                    <form action="/legg-i-favoritter" method="post">
-                        <input type="hidden" name="" value="{{ produkt['data']['ean'] }}">
-                        <button type="submit">
-                            <img src="../static/ikoner/stjerne+.png" alt="Legg i favoritter ikon">
-                        </button>
-                    </form>
+                    {% if produkt['data']['ean'] not in favoritter %}
+                        <form class="favorittForms" id="leggTilForms" action="/legg-i-favoritter" method="post">
+                            <input type="hidden" name="produkt" value="{{ produkt['data']['ean'] }}">
+                            <button type="submit">
+                                <img id="leggTilIkon" src="../static/ikoner/stjerne+.png" alt="Legg i favoritter ikon">
+                            </button>
+                        </form>
+                    {% else %}
+                        <form class="favorittForms" id="fjerFraForms" action="/fjern-fra-favoritter" method="post">
+                            <input type="hidden" name="produkt" value="{{ produkt['data']['ean'] }}">
+                            <button type="submit">
+                                <img id="fjernIkon" src="../static/ikoner/stjernex.png" alt="Fjern fra favoritter ikon">
+                            </button>
+                        </form>
+                    {% endif %}
+                    
+                    
                     
                     <div class="produktbildeContainer">
                         <img src="{{ produkt['data']['products']['image'] }}" alt="Produktbilde: {{ produkt['data']['products']['name'] }}">
@@ -57,16 +68,24 @@
 
         </div>
 
-
     {% endif %}
 
-    {% if sidetall_naa > 1 %}
-        <a href="?soek={{ soek }}&sidetall={{ sidetall_naa - 1 }}">Forrige side</a>
-    {% endif %}
+    <div id="sidevelger">
+        <div>
+            {% if sidetall_naa > 1 %}
+                <a href="?soek={{ soek }}&sidetall={{ sidetall_naa - 1 }}">Forrige side</a>
+            {% endif %}
+                
+            {% if not ingen_produkter %}
+                <a href="?soek={{ soek }}&sidetall={{ sidetall_naa + 1 }}">Neste side</a>
+            {% endif %}
+        </div>
+
+        {% if not ingen_produkter %}
+            <p> {{ sidetall_naa }} </p>
+        {% endif %}
         
-    {% if not ingen_produkter %}
-        <a href="?soek={{ soek }}&sidetall={{ sidetall_naa + 1 }}">Neste side</a>
-    {% endif %}
-        
+
+    </div>
 
 {% endblock %}

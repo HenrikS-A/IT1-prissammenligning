@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from henteData import hent_data, hent_data_ean, hent_butikker
 from finnPosisjon import finn_posisjon
 import json
@@ -83,7 +83,7 @@ def rute_produkter():
     # lagre_historikk()
 
 
-    return render_template("produktene.html", soek=s, ingen_produkter=ingen_produkter, produkter=produktene_data, sidetall_naa=sidetall_naa)
+    return render_template("produktene.html", soek=s, ingen_produkter=ingen_produkter, produkter=produktene_data, sidetall_naa=sidetall_naa, favoritter=favoritter)
 
 
 
@@ -93,6 +93,20 @@ def rute_produkt(ean):
     return render_template("produkt.html", ean=ean, produkt=produkt["data"])
 
 
+favoritter = []
+
+@app.post("/legg-i-favoritter")
+def legg_i_favoritter():
+    produkt_kode = request.form.get("produkt")
+    favoritter.append(produkt_kode)
+    return redirect(request.referrer) # returnerer siden som refererer deg til denne post-requesten.
+
+
+@app.post("/fjern-fra-favoritter")
+def fjern_fra_favoritter():
+    produkt_kode = request.form.get("produkt")
+    favoritter.remove(produkt_kode)
+    return redirect(request.referrer)
 
 
 @app.get("/butikker")
