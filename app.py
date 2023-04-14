@@ -119,7 +119,9 @@ def rute_butikker():
 
     return render_template("butikker.html", koordinater=koordinater, butikker=butikker["data"])
 
-
+@app.get("/favoritter")
+def rute_favoritter():
+    return render_template("favoritter.html", favoritter=favoritter)
 
 
 app.run(debug=True, port=5001)
