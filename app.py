@@ -30,13 +30,16 @@ def index():
 def rute_produkter():
 
     # Den ser om jeg har skrevet inn et søk eller bare vil til produktsiden. Jeg har et søk når vi har argumentet "soek".
+    s = request.args.get("soek")
+
+    # Sidetall
     try:
-        s = request.args["soek"]
-    except KeyError:
-        s = None
+        sidetall_naa = int(request.args.get("sidetall"))
+    except (ValueError, TypeError):
+        sidetall_naa = 1
 
     # Lagrer produktene hentet fra API-en
-    produkter = hent_data(s, sortering="price_asc")
+    produkter = hent_data(s, sidetall=sidetall_naa, sortering="price_asc")
 
     # Sjekker om det du søkte på finnes i databasen.
     if len(produkter["data"]) < 1:
@@ -73,14 +76,14 @@ def rute_produkter():
 
     # Når søket ikke gir noen produkter
     else:
-        return render_template("produktene.html", soek=s, ingen_produkter=ingen_produkter)
+        return render_template("produktene.html", soek=s, ingen_produkter=ingen_produkter, sidetall_naa=sidetall_naa)
 
 
     # historikk_liste.append(s)
     # lagre_historikk()
 
 
-    return render_template("produktene.html", soek=s, ingen_produkter=ingen_produkter, produkter=produktene_data)
+    return render_template("produktene.html", soek=s, ingen_produkter=ingen_produkter, produkter=produktene_data, sidetall_naa=sidetall_naa)
 
 
 

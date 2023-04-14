@@ -17,7 +17,7 @@
 
     {% if ingen_produkter %}
         <h4 id="ingenProdukterTekst">
-            Søket ditt ga ingen treff. Prøv å søke på noe annet.
+            Søket ditt ga ingen treff. Prøv å søke på noe annet, <br> eller gå til forrige side.
         </h4>
 
     {% else %}
@@ -26,6 +26,13 @@
             {% for produkt in produkter %}
         
                 <a href="/produkt/{{ produkt['data']['ean'] }}">
+
+                    <form action="/legg-i-favoritter" method="post">
+                        <input type="hidden" name="" value="{{ produkt['data']['ean'] }}">
+                        <button type="submit">
+                            <img src="../static/ikoner/stjerne+.png" alt="Legg i favoritter ikon">
+                        </button>
+                    </form>
                     
                     <div class="produktbildeContainer">
                         <img src="{{ produkt['data']['products']['image'] }}" alt="Produktbilde: {{ produkt['data']['products']['name'] }}">
@@ -49,9 +56,17 @@
             {% endfor %}
 
         </div>
-        
+
 
     {% endif %}
 
+    {% if sidetall_naa > 1 %}
+        <a href="?soek={{ soek }}&sidetall={{ sidetall_naa - 1 }}">Forrige side</a>
+    {% endif %}
+        
+    {% if not ingen_produkter %}
+        <a href="?soek={{ soek }}&sidetall={{ sidetall_naa + 1 }}">Neste side</a>
+    {% endif %}
+        
 
 {% endblock %}

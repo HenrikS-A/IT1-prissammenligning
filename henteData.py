@@ -7,7 +7,7 @@ def hent_data(soek=None, sidetall=None, merke=None, sortering=None):
     parametere = {
         "search": soek,
         "page": sidetall,
-        "size": 9,
+        "size": 15,
         "brand": merke,
         "price_min": 15, # for at produktene skal ha data, flesteparten av produktene under 15kr har ikke data...
         "sort": sortering
