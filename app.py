@@ -26,7 +26,6 @@ def index():
     return render_template("index.html")
 
 
-
 @app.get("/produkter")
 def rute_produkter():
 
@@ -36,41 +35,52 @@ def rute_produkter():
     except KeyError:
         s = None
 
+    # Lagrer produktene hentet fra API-en
     produkter = hent_data(s, sortering="price_asc")
 
-    # -------- DETTE FUNGERTE IKKE, prøvde å ikke vise de som ikke har 'data' --------
-    # i = 0
-    # for produkt in produkter["data"]:
-        
-    #     ean = produkt["ean"]
-    #     if ean == None:
-    #         del produkter["data"][i]
-
-    #     i += 1
-
-        
-    # for produkt in produkter["data"]:
-    #     print(produkt["ean"])
+    # Sjekker om det du søkte på finnes i databasen.
+    if len(produkter["data"]) < 1:
+        ingen_produkter = True
+    else:
+        ingen_produkter = False
 
 
-    # for produkt in range(len( produkter["data"] )):
-    #     try:
-    #         hent_data_ean(produkter["data"][produkt]["ean"])
-    #     except KeyError:
-    #         del produkter["data"][produkt]
-    #         print("slett")
 
-    # for produkt in produkter["data"]:
-    #     print(produkt["ean"])
+    # Når søket gav produkter:
+    if ingen_produkter == False:
 
-    # ---------------
+        # Lagrer alle ean-kodene i en liste for å passe på at samme produkt ikke vises flere ganger
+        produktsoek_ean = []
+        for produkt in produkter["data"]:
+            if produkt["ean"] not in produktsoek_ean: 
+                if produkt["ean"] != None: # Det var noen produkter som ikke har ean-kode. Jeg tar ikke de med.
+                    produktsoek_ean.append(produkt["ean"])
+
+
+        # Så lagrer den dataen til BARE det BILLIGSTE produktet i en ny liste. Dataen finner jeg med ean-kodene og funksjonen hent_data_ean.
+        produktene_data = []
+        for produktkode in produktsoek_ean:
+            produkt_data = hent_data_ean(produktkode)
+
+            # Denne sorterer listen etter pris-elementet som ligger i en liste og flere ordbøker
+            # Lambda er en funksjon som finner det jeg leter etter inne ordboken og som sorted() bruker for å sortere riktig.
+            sortert_products = sorted(produkt_data["data"]["products"], key=lambda element: element["current_price"]["price"])
+
+            billigste_produkt = sortert_products[0] # Billigste vil ha index 0.
+            produkt_data["data"]["products"] = billigste_produkt # Endrer api-ets fil slik at bare det billigste vises på oversikten.
+            produktene_data.append(produkt_data)
+
+
+    # Når søket ikke gir noen produkter
+    else:
+        return render_template("produktene.html", soek=s, ingen_produkter=ingen_produkter)
 
 
     # historikk_liste.append(s)
     # lagre_historikk()
 
 
-    return render_template("produktene.html", soek=s, produkter=produkter["data"])
+    return render_template("produktene.html", soek=s, ingen_produkter=ingen_produkter, produkter=produktene_data)
 
 
 

@@ -13,7 +13,7 @@ h1 {
 }
 
 
-.gridBox>a {
+.gridBox a {
     background-color: white;
     
     display: flex;
@@ -25,7 +25,7 @@ h1 {
     height: 44vh;
     border: solid 0.75px rgba(8, 41, 57, 0.1);
 }
-.gridBox>a:hover {
+.gridBox a:hover {
     filter: brightness(96%);
 }
 
