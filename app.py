@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect
 from henteData import hent_data, hent_data_ean, hent_butikker
 from finnPosisjon import finn_posisjon
+from riktigPris import riktig_pris
 import json
 
 app = Flask(__name__)
@@ -70,7 +71,7 @@ def rute_produkter():
             sortert_products = sorted(produkt_data["data"]["products"], key=lambda element: element["current_price"]["price"])
 
             billigste_produkt = sortert_products[0] # Billigste vil ha index 0.
-            produkt_data["data"]["products"] = billigste_produkt # Endrer api-ets fil slik at bare det billigste vises på oversikten.
+            produkt_data["data"]["products"] = billigste_produkt # Endrer api-et slik at bare det billigste vises på oversikten.
             produktene_data.append(produkt_data)
 
 
@@ -89,8 +90,32 @@ def rute_produkter():
 
 @app.get("/produkt/<ean>")
 def rute_produkt(ean):
-    produkt = hent_data_ean(ean)
-    return render_template("produkt.html", ean=ean, produkt=produkt["data"])
+    produkt_data = hent_data_ean(ean)
+
+    #Sorterer prisen i stigende rekkefølge
+    sortert_products = sorted(produkt_data["data"]["products"], key=lambda element: element["current_price"]["price"])
+    billigste_produkt = sortert_products[0] # Billigste vil ha index 0.
+
+    produkt_data["data"]["products"] = sortert_products # Endrer api-et slik at bare det produktenes rekkefølge er etter pris.
+
+    
+
+    
+    for produkt in sortert_products:
+
+        # Noen av produktene i sortert_products["brand"] har verdien None. Her finner jeg merket ved å sjekke dem.
+        if produkt["brand"] != None:
+            merke = produkt["brand"]
+            break
+
+    # Gjør at prisen får riktig antall desimaler. Jeg har en ny loop fordi jeg break-er den over.
+    prisene = []
+    for produkt in sortert_products:
+        prisen = str(produkt["current_price"]["price"])
+        pris = riktig_pris(prisen)
+        prisene.append(pris)
+
+    return render_template("produkt.html", ean=ean, produkter=produkt_data["data"], billigst=billigste_produkt, merke=merke, prisene=prisene)
 
 
 favoritter = []

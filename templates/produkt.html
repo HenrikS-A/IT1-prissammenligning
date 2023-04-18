@@ -1,5 +1,21 @@
 {% extends 'mal.html' %}
 
 {% block main %}
-    {{ produkt["products"][0]["name"] }} - {{ produkt["products"][0]["current_price"]["price"] }} - {{ produkt["products"][0]["vendor"] }}
+    
+    <div>
+        <div>
+            <img src="{{ billigst['image'] }}" alt="Bilde av: {{ billigst['name'] }}">
+        </div>
+        <div>
+            <h1>{{ billigst["name"] }}</h1>
+            <h2>{{ merke }}</h2>
+            <h1>{{ prisene[0] }}</h1>
+        </div>
+    </div>
+
+    {% for pris in prisene %}
+        <p>{{ pris }}</p>
+        
+    {% endfor %}
+
 {% endblock %}
