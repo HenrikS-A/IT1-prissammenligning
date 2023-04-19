@@ -102,11 +102,20 @@ def rute_produkt(ean):
 
     
     for produkt in sortert_products:
-
-        # Noen av produktene i sortert_products["brand"] har verdien None. Her finner jeg merket ved å sjekke dem.
+        # Noen av produkt merkene har verdien None. Her finner jeg merket ved å sjekke til jeg finner et.
         if produkt["brand"] != None:
             merke = produkt["brand"]
             break
+        else:
+            merke = ""
+
+    for produkt in sortert_products:
+        # Noen av produkt infoene har verdien None. Her finner jeg infoen ved å sjekke til jeg finner et.
+        if produkt["description"] != None:
+            beskrivelse = produkt["description"]
+            break
+        else:
+            beskrivelse = ""
 
     # Gjør at prisen får riktig antall desimaler. Jeg har en ny loop fordi jeg break-er den over.
     prisene = []
@@ -115,7 +124,7 @@ def rute_produkt(ean):
         pris = riktig_pris(prisen)
         prisene.append(pris)
 
-    return render_template("produkt.html", ean=ean, produkter=produkt_data["data"], billigst=billigste_produkt, merke=merke, prisene=prisene)
+    return render_template("produkt.html", ean=ean, produkter=produkt_data["data"], billigst=billigste_produkt, prisene=prisene, merke=merke, beskrivelse=beskrivelse)
 
 
 favoritter = []

@@ -1,21 +1,55 @@
 {% extends 'mal.html' %}
 
+{% block tittel %}{{ billigst["name"] }}{% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{{ url_for('static',filename='produkt.css' ) }}"> {% endblock %}
+
 {% block main %}
     
-    <div>
-        <div>
+    <button id="tilbakeknapp" onclick="history.back()">Gå tilbake
+        <div class="triangle-left"></div>
+    </button>
+
+    <div class="produktoversikt">
+        <div id="bildeContainer">
             <img src="{{ billigst['image'] }}" alt="Bilde av: {{ billigst['name'] }}">
         </div>
-        <div>
+        <div class="oversiktsinfo">
             <h1>{{ billigst["name"] }}</h1>
-            <h2>{{ merke }}</h2>
-            <h1>{{ prisene[0] }}</h1>
+            <h3>{{ merke }}</h3>
+            <p>{{ beskrivelse }}</p>
+            <h2>kr {{ prisene[0] }},-</h2>
         </div>
     </div>
 
-    {% for pris in prisene %}
-        <p>{{ pris }}</p>
-        
+    <h1>Alle priser</h1>
+
+    {% for produkt in produkter["products"] %}
+        <div>
+            <div>
+                <img src="{{ produkt['store']['logo'] }}" alt="Logo til {{ produkt['store']['name'] }}">
+                <p>{{produkt["store"]["name"]}}</p>
+            </div>
+            <div>
+                <p>Butikkens produktnavn:</p>
+                <h5>{{ produkt["name"] }}</h5>
+            </div>
+            <div>
+                <!-- loop index er en 'telle-variabel' man kan bruke i jinja 2. -->
+                <h3>kr {{ prisene[loop.index0] }},-</h3>
+            </div>
+        </div>
     {% endfor %}
 
+    <div>
+        <br>
+        <h1>Næringsinnhold:</h1>
+        <p>{{ produkter["nutrition"] }}</p>
+        <br>
+        <h1>Allergener:</h1>
+        <p>{{ produkter["allergens"] }}</p>
+        <br>
+    </div>
+
+    
 {% endblock %}

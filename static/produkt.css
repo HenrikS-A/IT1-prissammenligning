@@ -1,0 +1,86 @@
+
+main {
+    margin-top: -20px;
+}
+#tilbakeknapp {
+    margin-bottom: 10px;
+    border: none;
+    background-color: rgb(247, 246, 244);
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 5px;
+    text-decoration: underline rgb(8, 41, 57);
+    color: rgb(8, 41, 57);
+    font-weight: 400;
+    align-items: center;
+}
+#tilbakeknapp:hover {
+    cursor: pointer;
+    color: rgba(8, 41, 57, 0.8);
+}
+/* Funnet på getcssscan, er bare et ikon */
+.triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-right: 10px solid rgb(8, 41, 57);
+    border-bottom: 5px solid transparent;
+
+    margin-right: 5px;
+}
+
+.produktoversikt {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: solid 1px rgb(8, 41, 57);
+}
+.produktoversikt>div {
+    width: 50%;
+}
+
+#bildeContainer {
+    width: 490px;
+    height: 440px;
+    padding: 35px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+#bildeContainer img {
+    width: auto; height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    align-self: center;
+}
+
+.oversiktsinfo {
+    margin-left: 40px;
+    color: rgb(8, 41, 57);
+    position: relative;
+}
+.oversiktsinfo h1 {
+    margin-top: 40px;
+    font-size: 60px;
+    font-weight: 500;
+
+    padding-bottom: 15px;
+    border-bottom: solid 1px rgb(8, 41, 57);
+}
+.oversiktsinfo h3 {
+    text-transform: uppercase;
+    color: rgba(8, 41, 57, 0.7);
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.oversiktsinfo p {
+    margin: 40px 10px 15px 15px;
+    font-weight: 200;
+}
+.oversiktsinfo h2 {
+    position: absolute;
+    bottom: 20px;
+    font-size: 50px;
+    font-weight: 600;
+}
