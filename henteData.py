@@ -20,8 +20,6 @@ def hent_data(soek=None, sidetall=None, merke=None, sortering=None):
         }
   
     respons = requests.get(url, parametere, headers=headers)
-
-    print(respons.status_code)
     data = respons.json()
 
     return data
@@ -38,8 +36,6 @@ def hent_data_ean(ean):
         }
   
     respons = requests.get(url, headers=headers)
-
-    print(respons.status_code)
     data = respons.json()
 
     return data
@@ -63,8 +59,6 @@ def hent_butikker(lat, lng, km=None):
         }
   
     respons = requests.get(url, parametere, headers=headers)
-
-    print(respons.status_code)
     data = respons.json()
 
     return data

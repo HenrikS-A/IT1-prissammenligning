@@ -10,7 +10,7 @@
         <div class="triangle-left"></div>
     </button>
 
-    <div class="produktoversikt">
+    <section class="produktoversikt">
         <div id="bildeContainer">
             <img src="{{ billigst['image'] }}" alt="Bilde av: {{ billigst['name'] }}">
         </div>
@@ -19,37 +19,108 @@
             <h3>{{ merke }}</h3>
             <p>{{ beskrivelse }}</p>
             <h2>kr {{ prisene[0] }},-</h2>
+
+            {% if produkter['ean'] not in favoritter %}
+                <form class="favorittForms" id="leggTilForms" action="/legg-i-favoritter" method="post">
+                    <input type="hidden" name="produkt" value="{{ produkter['ean'] }}">
+                    <button type="submit">
+                        <img id="leggTilIkon" src="../static/ikoner/stjerne+.png" alt="Legg i favoritter ikon">
+                    </button>
+                </form>
+            {% else %}
+                <form class="favorittForms" id="fjerFraForms" action="/fjern-fra-favoritter" method="post">
+                    <input type="hidden" name="produkt" value="{{ produkter['ean'] }}">
+                    <button type="submit">
+                        <img id="fjernIkon" src="../static/ikoner/stjernex.png" alt="Fjern fra favoritter ikon">
+                    </button>
+                </form>
+            {% endif %}
         </div>
-    </div>
+    </section>
 
-    <h1>Alle priser</h1>
+    <section class="produktSection">
+        <h1>Alle priser</h1>
+    
+        <div class="gridWrapper">
+            {% for produkt in produkter["products"] %}
+            <a class="priserGrid" href="{{ produkt['url'] }}" target="_blank">
+                <div id="butikk">
+                    <img src="{{ produkt['store']['logo'] }}" alt="Logo til {{ produkt['store']['name'] }}">
+                    <p>{{produkt["store"]["name"]}}</p>
+                </div>
+                <div id="produktnavn" class="span-6">
+                    <p>Butikkens produktnavn:</p>
+                    <h5>{{ produkt["name"] }}</h5>
+                </div>
+                <div class="span-2">
+                    <!-- loop index er en 'telle-variabel' man kan bruke i jinja 2. -->
+                    <h3>kr {{ prisene[loop.index0] }},-</h3>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
 
-    {% for produkt in produkter["products"] %}
-        <div>
-            <div>
-                <img src="{{ produkt['store']['logo'] }}" alt="Logo til {{ produkt['store']['name'] }}">
-                <p>{{produkt["store"]["name"]}}</p>
+    <section class="produktSection">
+
+        <h1>Produktinformasjon</h1>
+        <div class="merWrapper">
+            <div onclick="skjul_vis1()">
+                <div class="merKnapp" >
+                    <h2>Info</h2>
+                    <div class="arrow-down"></div>
+                </div>
+                <div class="merInnhold">
+                    <h6>Produktnavn:</h6>
+                    <p>{{ billigst["name"] }}</p>
+                    <h6>Leverandør:</h6>
+                    <p>{{ billigst["vendor"] }}</p>
+                    <h6>Europeisk artikkelnummer (EAN):</h6>
+                    <p>{{ ean }}</p>
+                </div>
             </div>
-            <div>
-                <p>Butikkens produktnavn:</p>
-                <h5>{{ produkt["name"] }}</h5>
+            <div onclick="skjul_vis2()">
+                <div class="merKnapp" >
+                    <h2>Næringsinnhold</h2>
+                    <div class="arrow-down"></div>
+                </div>
+                <div class="merInnhold">
+                    <h5>Næringsinnhold per 100g av matvaren</h5>
+                    {% for innhold in produkter["nutrition"] %}
+                        <ul>
+                            <li>{{ innhold["display_name"] }}: {{ innhold["amount"] }} {{innhold["unit"]}}</li>
+                        </ul>
+                    {% endfor %}
+                </div>
             </div>
-            <div>
-                <!-- loop index er en 'telle-variabel' man kan bruke i jinja 2. -->
-                <h3>kr {{ prisene[loop.index0] }},-</h3>
+            <div onclick="skjul_vis3()">
+                <div class="merKnapp">
+                    <h2>Allergener</h2>
+                    <div class="arrow-down"></div>
+                </div>
+                <div class="merInnhold">
+                    {% for allergen in produkter["allergens"] %}
+                        {% if allergen["contains"] != "NO" %}
+                            {% if allergen["contains"] == "YES" %}
+                                <ul>
+                                    <li>Inneholder {{ allergen["display_name"] }}</li>
+                                </ul>
+                            {% else %}
+                                <ul>
+                                    <li>Kan inneholde spor av {{ allergen["display_name"] }}</li>
+                                </ul>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+
+                </div>
             </div>
         </div>
-    {% endfor %}
 
-    <div>
-        <br>
-        <h1>Næringsinnhold:</h1>
-        <p>{{ produkter["nutrition"] }}</p>
-        <br>
-        <h1>Allergener:</h1>
-        <p>{{ produkter["allergens"] }}</p>
-        <br>
-    </div>
+    </section>
+
+
+    <script src="../static/skjul-vis.js"></script>
 
     
 {% endblock %}

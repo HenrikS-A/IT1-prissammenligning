@@ -98,7 +98,6 @@ def rute_produkt(ean):
 
     produkt_data["data"]["products"] = sortert_products # Endrer api-et slik at bare det produktenes rekkefølge er etter pris.
 
-    
 
     
     for produkt in sortert_products:
@@ -117,6 +116,7 @@ def rute_produkt(ean):
         else:
             beskrivelse = ""
 
+
     # Gjør at prisen får riktig antall desimaler. Jeg har en ny loop fordi jeg break-er den over.
     prisene = []
     for produkt in sortert_products:
@@ -124,7 +124,7 @@ def rute_produkt(ean):
         pris = riktig_pris(prisen)
         prisene.append(pris)
 
-    return render_template("produkt.html", ean=ean, produkter=produkt_data["data"], billigst=billigste_produkt, prisene=prisene, merke=merke, beskrivelse=beskrivelse)
+    return render_template("produkt.html", ean=ean, produkter=produkt_data["data"], billigst=billigste_produkt, prisene=prisene, merke=merke, beskrivelse=beskrivelse, favoritter=favoritter)
 
 
 favoritter = []
@@ -135,12 +135,12 @@ def legg_i_favoritter():
     favoritter.append(produkt_kode)
     return redirect(request.referrer) # returnerer siden som refererer deg til denne post-requesten.
 
-
 @app.post("/fjern-fra-favoritter")
 def fjern_fra_favoritter():
     produkt_kode = request.form.get("produkt")
     favoritter.remove(produkt_kode)
     return redirect(request.referrer)
+
 
 
 @app.get("/butikker")

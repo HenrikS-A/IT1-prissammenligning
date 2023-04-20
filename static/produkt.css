@@ -1,6 +1,7 @@
 
 main {
     margin-top: -20px;
+    color: rgb(8, 41, 57);
 }
 #tilbakeknapp {
     margin-bottom: 10px;
@@ -10,7 +11,6 @@ main {
     flex-direction: row-reverse;
     margin-left: 5px;
     text-decoration: underline rgb(8, 41, 57);
-    color: rgb(8, 41, 57);
     font-weight: 400;
     align-items: center;
 }
@@ -18,7 +18,7 @@ main {
     cursor: pointer;
     color: rgba(8, 41, 57, 0.8);
 }
-/* Funnet på getcssscan, er bare et ikon */
+/* Funnet på nettet, er bare et ikon */
 .triangle-left {
     width: 0;
     height: 0;
@@ -31,8 +31,6 @@ main {
 
 .produktoversikt {
     display: flex;
-    padding-bottom: 20px;
-    border-bottom: solid 1px rgb(8, 41, 57);
 }
 .produktoversikt>div {
     width: 50%;
@@ -55,7 +53,6 @@ main {
 
 .oversiktsinfo {
     margin-left: 40px;
-    color: rgb(8, 41, 57);
     position: relative;
 }
 .oversiktsinfo h1 {
@@ -63,8 +60,6 @@ main {
     font-size: 60px;
     font-weight: 500;
 
-    padding-bottom: 15px;
-    border-bottom: solid 1px rgb(8, 41, 57);
 }
 .oversiktsinfo h3 {
     text-transform: uppercase;
@@ -84,3 +79,160 @@ main {
     font-size: 50px;
     font-weight: 600;
 }
+
+.favorittForms {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+}
+.favorittForms button {
+    background-color: rgb(247, 246, 244);
+    border: none;
+    padding: 4px 3px 0px 4px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.favorittForms button:hover {
+    background-color: white;
+    cursor: pointer;
+}
+.favorittForms img{
+    width: 65px;
+}
+
+
+.produktSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.produktSection h1 {
+    margin-top: 90px;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid rgb(8, 41, 57);
+    width: 80%;
+    font-size: 26px;
+}
+
+.gridWrapper {
+    width: 80%;
+}
+.priserGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    text-decoration: none;
+    color: rgb(8, 41, 57);
+}
+.priserGrid:nth-child(2n-1) {
+    background-color: rgb(234, 230, 224);
+}
+.priserGrid>div {
+    grid-column: span 4;
+    width: fit-content;
+}
+.priserGrid:hover {
+    transform: scale(1.03);
+}
+
+#butikk {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+#butikk img{
+    width: 60px;
+    border: solid 0.1px rgb(8, 41, 57);
+}
+#butikk p {
+    margin-left: 15px;
+    font-size: 20px;
+}
+
+#produktnavn {
+    position: relative;
+}
+#produktnavn p {
+    position: absolute;
+    top: -15px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: rgba(8, 41, 57, 0.4);
+}
+#produktnavn h5 {
+    font-size: 16px;
+}
+
+.priserGrid .span-2 {
+    grid-column: span 2;
+    margin-left: auto;
+    margin-right: 20px;
+}
+.priserGrid .span-6 {
+    grid-column: span 6;
+}
+
+
+.merWrapper {
+    width: 80%;
+    margin-bottom: 50px;
+}
+.merWrapper>div {
+    background-color: rgb(234, 230, 224);
+    margin-top: 6px; margin-bottom: 6px;
+    padding: 20px;
+}
+.merWrapper>div:hover {
+    cursor: pointer;
+}
+.merWrapper h2 {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-left: 30px;
+}
+.merKnapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Funnet på nettet, er bare et ikon */
+.arrow-down {
+    width: 8px;
+    height: 8px;
+    border: 2px solid rgb(8, 41, 57);
+    border-left: 0;
+    border-top: 0;
+  
+    transform: rotate(45deg);
+    margin-right: 20px;
+}
+
+.merInnhold {
+    margin: 20px 5px 5px 30px;
+}
+.merInnhold h6 {
+    font-size: 14px;
+    margin-top: 20px;
+}
+.merInnhold p {
+    margin-bottom: 10px;
+}
+
+.merInnhold h5 {
+    margin-top: 5px; margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.merInnhold li {
+    margin-left: 30px;
+    list-style-type: circle;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+/* 
+main {
+    background-color: black;
+} */
