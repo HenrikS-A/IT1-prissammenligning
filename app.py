@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect
 from henteData import hent_data, hent_data_ean, hent_butikker
 from finnPosisjon import finn_posisjon
 from riktigPris import riktig_pris
+from prishistorikk import lag_graf
 import json
 
 app = Flask(__name__)
@@ -124,7 +125,19 @@ def rute_produkt(ean):
         pris = riktig_pris(prisen)
         prisene.append(pris)
 
-    return render_template("produkt.html", ean=ean, produkter=produkt_data["data"], billigst=billigste_produkt, prisene=prisene, merke=merke, beskrivelse=beskrivelse, favoritter=favoritter)
+    # Sjekker om det er allergener for produktet.
+    antall_allergener = 0
+    for allergen in produkt_data["data"]["allergens"]:
+        if allergen["contains"] != "NO":
+            antall_allergener += 1
+
+    
+    graf = lag_graf(sortert_products)
+    graf_src = graf["url"]
+
+
+
+    return render_template("produkt.html", ean=ean, produkter=produkt_data["data"], billigst=billigste_produkt, prisene=prisene, merke=merke, beskrivelse=beskrivelse, favoritter=favoritter, antall_allergener=antall_allergener, graf_src=graf_src)
 
 
 favoritter = []

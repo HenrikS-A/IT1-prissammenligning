@@ -62,10 +62,19 @@
     </section>
 
     <section class="produktSection">
+        <h1>Prishistorikk</h1>
+
+        <img id="graf" src="{{ graf_src }}" alt="Prishistorikk for:{{ billigst['name'] }}">
+
+        <p>* Grafen er laget med QuickCharts api </p>
+    </section>
+
+
+    <section class="produktSection">
 
         <h1>Produktinformasjon</h1>
         <div class="merWrapper">
-            <div onclick="skjul_vis1()">
+            <div onclick="skjul_vis(0)">
                 <div class="merKnapp" >
                     <h2>Info</h2>
                     <div class="arrow-down"></div>
@@ -73,13 +82,15 @@
                 <div class="merInnhold">
                     <h6>Produktnavn:</h6>
                     <p>{{ billigst["name"] }}</p>
+                    <h6>Ingredienser:</h6>
+                    <p>{{ billigst["ingredients"] }}</p>
                     <h6>Leverandør:</h6>
                     <p>{{ billigst["vendor"] }}</p>
                     <h6>Europeisk artikkelnummer (EAN):</h6>
                     <p>{{ ean }}</p>
                 </div>
             </div>
-            <div onclick="skjul_vis2()">
+            <div onclick="skjul_vis(1)">
                 <div class="merKnapp" >
                     <h2>Næringsinnhold</h2>
                     <div class="arrow-down"></div>
@@ -93,25 +104,30 @@
                     {% endfor %}
                 </div>
             </div>
-            <div onclick="skjul_vis3()">
+            <div onclick="skjul_vis(2)">
                 <div class="merKnapp">
                     <h2>Allergener</h2>
                     <div class="arrow-down"></div>
                 </div>
                 <div class="merInnhold">
-                    {% for allergen in produkter["allergens"] %}
-                        {% if allergen["contains"] != "NO" %}
-                            {% if allergen["contains"] == "YES" %}
-                                <ul>
-                                    <li>Inneholder {{ allergen["display_name"] }}</li>
-                                </ul>
-                            {% else %}
-                                <ul>
-                                    <li>Kan inneholde spor av {{ allergen["display_name"] }}</li>
-                                </ul>
+                    {% if antall_allergener == 0 %}
+                        <p>Dette produktet har ingen allergener.</p>
+                    {% else %}
+                        {% for allergen in produkter["allergens"] %}
+                            {% if allergen["contains"] != "NO" %}
+                                {% if allergen["contains"] == "YES" %}
+                                    <ul>
+                                        <li>Inneholder {{ allergen["display_name"] }}</li>
+                                    </ul>
+                                {% else %}
+                                    <ul>
+                                        <li>Kan inneholde spor av {{ allergen["display_name"] }}</li>
+                                    </ul>
+                                {% endif %}
                             {% endif %}
-                        {% endif %}
-                    {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                    
 
                 </div>
             </div>

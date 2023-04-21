@@ -57,7 +57,7 @@ main {
 }
 .oversiktsinfo h1 {
     margin-top: 40px;
-    font-size: 60px;
+    font-size: 55px;
     font-weight: 500;
 
 }
@@ -211,6 +211,7 @@ main {
 
 .merInnhold {
     margin: 20px 5px 5px 30px;
+    display: none;
 }
 .merInnhold h6 {
     font-size: 14px;
@@ -232,7 +233,13 @@ main {
     margin-bottom: 3px;
 }
 
-/* 
-main {
-    background-color: black;
-} */
+#graf {
+    padding: 40px 100px 80px 100px;
+    border: solid 1px rgba(8, 41, 57, 0.4);
+    border-radius: 5px;
+    width: 750px;
+}
+.produktSection>p {
+    margin-top: 30px;
+    font-size: 12px;
+}
