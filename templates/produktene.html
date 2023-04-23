@@ -2,7 +2,10 @@
 
 {% block tittel %}Produkter{% endblock %}
 
-{% block css %} <link rel="stylesheet" href="{{ url_for('static',filename='produktene.css' ) }}"> {% endblock %}
+{% block css %} 
+    <link rel="stylesheet" href="{{ url_for('static',filename='produktene.css' ) }}"> 
+    <link rel="stylesheet" href="{{ url_for('static',filename='produktvisning.css' ) }}">
+{% endblock %}
 
 {% block main %}
 

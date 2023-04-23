@@ -1,1 +1,1102 @@
-{"8005709400733": {"ean": "8005709400733", "products": [{"id": 71289, "name": "Durumhvetepasta Penne", "vendor": null, "brand": "Armando", "description": "Durumhvetepasta fra Armando. 500g", "ingredients": null, "url": "https://shop.havaristen.no/products/durumhvetepasta-penne", "image": "https://havaristen-i03.mycdn.no/mysimgprod/havaristen_mystore_no/images/xJaDF_Armando_Durumhvetepasta_Penne_1.jpg/w600h600.jpg", "store": {"name": "Havaristen", "code": "HAVARISTEN", "url": "https://havaristen.no/", "logo": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/logos/Havaristen.svg"}, "current_price": {"price": 15, "date": "2023-04-19T11:44:39.000000Z"}, "price_history": [{"price": 15, "date": "2023-04-19T11:44:39.000000Z"}, {"price": 15, "date": "2023-04-18T09:25:40.000000Z"}], "kassalapp": {"url": "https://kassal.app/vare/71289-durumhvetepasta-penne-8005709400733", "opengraph": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/opengraph/products/71289.jpg"}, "created_at": "2023-04-19T11:44:39.000000Z", "updated_at": "2023-04-19T11:44:39.000000Z"}], "allergens": [], "nutrition": []}, "2000681200001": {"ean": "2000681200001", "products": [{"id": 35709, "name": "Chateaubriand Av Storfe Indrefilet pr Kg", "vendor": "Kj\u00f8tt/p\u00f8lser l\u00f8svekt", "brand": null, "description": null, "ingredients": null, "url": "https://meny.no/Varer/kjott/storfekjott/indrefilet-av-storfe/chateaubriand-2000681200001", "image": "https://bilder.ngdata.no/6812/meny/large.jpg", "store": {"name": "Meny", "code": "MENY_NO", "url": "https://meny.no/Varer", "logo": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/logos/Meny.svg"}, "current_price": {"price": 129, "date": "2023-04-23T10:01:32.000000Z"}, "price_history": [{"price": 129, "date": "2023-04-23T10:01:32.000000Z"}, {"price": 129, "date": "2023-04-23T00:42:06.000000Z"}, {"price": 129, "date": "2023-04-21T11:46:34.000000Z"}, {"price": 129, "date": "2023-04-20T10:52:46.000000Z"}, {"price": 129, "date": "2023-04-19T11:43:57.000000Z"}, {"price": 129, "date": "2023-04-18T09:25:20.000000Z"}, {"price": 129, "date": "2023-04-17T14:37:54.000000Z"}, {"price": 129, "date": "2023-04-16T05:32:13.000000Z"}, {"price": 129, "date": "2023-04-13T06:59:16.000000Z"}, {"price": 129, "date": "2023-04-13T02:20:22.000000Z"}, {"price": 129, "date": "2023-04-12T08:10:37.000000Z"}, {"price": 129, "date": "2023-04-11T07:44:01.000000Z"}, {"price": 129, "date": "2023-04-09T22:28:56.000000Z"}, {"price": 129, "date": "2023-04-08T08:25:20.000000Z"}, {"price": 129, "date": "2023-04-05T11:12:45.000000Z"}, {"price": 129, "date": "2023-04-04T18:26:41.000000Z"}, {"price": 136, "date": "2023-04-03T07:01:46.000000Z"}, {"price": 136, "date": "2023-04-02T21:49:39.000000Z"}, {"price": 136, "date": "2023-04-01T12:20:35.000000Z"}, {"price": 136, "date": "2023-03-30T11:28:28.000000Z"}, {"price": 136, "date": "2023-03-28T22:14:53.000000Z"}, {"price": 136, "date": "2023-03-28T08:46:40.000000Z"}, {"price": 136, "date": "2023-03-27T04:40:17.000000Z"}, {"price": 136, "date": "2023-03-25T18:23:48.000000Z"}, {"price": 136, "date": "2023-03-24T19:24:19.000000Z"}], "kassalapp": {"url": "https://kassal.app/vare/35709-chateaubriand-av-storfe-indrefilet-pr-kg-2000681200001", "opengraph": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/opengraph/products/35709.jpg"}, "created_at": "2023-04-23T10:01:32.000000Z", "updated_at": "2023-04-23T10:01:32.000000Z"}], "allergens": [{"code": "blotdyr", "display_name": "Bl\u00f8tdyr", "contains": "UNKNOWN"}, {"code": "egg", "display_name": "Egg", "contains": "UNKNOWN"}, {"code": "fisk", "display_name": "Fisk", "contains": "UNKNOWN"}, {"code": "gluten", "display_name": "Gluten", "contains": "UNKNOWN"}, {"code": "lupiner", "display_name": "Lupiner", "contains": "UNKNOWN"}, {"code": "melk", "display_name": "Melk", "contains": "UNKNOWN"}, {"code": "notter", "display_name": "N\u00f8tter", "contains": "UNKNOWN"}, {"code": "peanotter", "display_name": "Pean\u00f8tter", "contains": "UNKNOWN"}, {"code": "selleri", "display_name": "Selleri", "contains": "UNKNOWN"}, {"code": "sennep", "display_name": "Sennep", "contains": "UNKNOWN"}, {"code": "sesam", "display_name": "Sesam", "contains": "UNKNOWN"}, {"code": "skalldyr", "display_name": "Skalldyr", "contains": "UNKNOWN"}, {"code": "soya", "display_name": "Soya", "contains": "UNKNOWN"}, {"code": "sulfitt", "display_name": "Sulfitt", "contains": "UNKNOWN"}], "nutrition": []}}
+{
+    "5060503501225": {
+        "id": 291,
+        "name": "Squash&Eple Avokado 120g Ellas",
+        "vendor": "Jensen & co as",
+        "brand": "Ellas",
+        "description": null,
+        "ingredients": null,
+        "url": "https://meny.no/Varer/barneprodukter/barnedessert/squasheple-5060503501225",
+        "image": "https://bilder.ngdata.no/5060503501225/meny/large.jpg",
+        "store": {
+            "name": "Meny",
+            "code": "MENY_NO",
+            "url": "https://meny.no/Varer",
+            "logo": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/logos/Meny.svg"
+        },
+        "current_price": {
+            "price": 15.65,
+            "date": "2022-02-17T17:52:44.000000Z"
+        },
+        "price_history": [
+            {
+                "price": 15.65,
+                "date": "2022-02-17T17:52:44.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T06:39:29.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T06:29:09.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T06:23:52.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T05:58:03.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T05:52:49.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T05:47:43.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T05:42:35.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T05:37:25.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T05:32:13.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T05:27:04.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T05:21:54.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T05:16:40.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T05:11:29.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T05:06:23.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T05:01:12.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T04:55:57.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T04:50:53.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T04:45:40.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T04:40:33.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T04:35:23.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T04:30:14.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T04:25:05.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T04:19:53.000000Z"
+            },
+            {
+                "price": 30.9,
+                "date": "2022-01-16T04:14:38.000000Z"
+            }
+        ],
+        "kassalapp": {
+            "url": "https://kassal.app/vare/291-squasheple-avokado-120g-ellas-5060503501225",
+            "opengraph": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/opengraph/products/291.jpg"
+        },
+        "created_at": "2023-03-25T17:15:08.000000Z",
+        "updated_at": "2023-03-25T17:15:08.000000Z"
+    },
+    "2000681200001": {
+        "id": 35709,
+        "name": "Chateaubriand Av Storfe Indrefilet pr Kg",
+        "vendor": "Kj\u00f8tt/p\u00f8lser l\u00f8svekt",
+        "brand": null,
+        "description": null,
+        "ingredients": null,
+        "url": "https://meny.no/Varer/kjott/storfekjott/indrefilet-av-storfe/chateaubriand-2000681200001",
+        "image": "https://bilder.ngdata.no/6812/meny/large.jpg",
+        "store": {
+            "name": "Meny",
+            "code": "MENY_NO",
+            "url": "https://meny.no/Varer",
+            "logo": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/logos/Meny.svg"
+        },
+        "current_price": {
+            "price": 129,
+            "date": "2023-04-23T10:01:32.000000Z"
+        },
+        "price_history": [
+            {
+                "price": 129,
+                "date": "2023-04-23T10:01:32.000000Z"
+            },
+            {
+                "price": 129,
+                "date": "2023-04-23T00:42:06.000000Z"
+            },
+            {
+                "price": 129,
+                "date": "2023-04-21T11:46:34.000000Z"
+            },
+            {
+                "price": 129,
+                "date": "2023-04-20T10:52:46.000000Z"
+            },
+            {
+                "price": 129,
+                "date": "2023-04-19T11:43:57.000000Z"
+            },
+            {
+                "price": 129,
+                "date": "2023-04-18T09:25:20.000000Z"
+            },
+            {
+                "price": 129,
+                "date": "2023-04-17T14:37:54.000000Z"
+            },
+            {
+                "price": 129,
+                "date": "2023-04-16T05:32:13.000000Z"
+            },
+            {
+                "price": 129,
+                "date": "2023-04-13T06:59:16.000000Z"
+            },
+            {
+                "price": 129,
+                "date": "2023-04-13T02:20:22.000000Z"
+            },
+            {
+                "price": 129,
+                "date": "2023-04-12T08:10:37.000000Z"
+            },
+            {
+                "price": 129,
+                "date": "2023-04-11T07:44:01.000000Z"
+            },
+            {
+                "price": 129,
+                "date": "2023-04-09T22:28:56.000000Z"
+            },
+            {
+                "price": 129,
+                "date": "2023-04-08T08:25:20.000000Z"
+            },
+            {
+                "price": 129,
+                "date": "2023-04-05T11:12:45.000000Z"
+            },
+            {
+                "price": 129,
+                "date": "2023-04-04T18:26:41.000000Z"
+            },
+            {
+                "price": 136,
+                "date": "2023-04-03T07:01:46.000000Z"
+            },
+            {
+                "price": 136,
+                "date": "2023-04-02T21:49:39.000000Z"
+            },
+            {
+                "price": 136,
+                "date": "2023-04-01T12:20:35.000000Z"
+            },
+            {
+                "price": 136,
+                "date": "2023-03-30T11:28:28.000000Z"
+            },
+            {
+                "price": 136,
+                "date": "2023-03-28T22:14:53.000000Z"
+            },
+            {
+                "price": 136,
+                "date": "2023-03-28T08:46:40.000000Z"
+            },
+            {
+                "price": 136,
+                "date": "2023-03-27T04:40:17.000000Z"
+            },
+            {
+                "price": 136,
+                "date": "2023-03-25T18:23:48.000000Z"
+            },
+            {
+                "price": 136,
+                "date": "2023-03-24T19:24:19.000000Z"
+            }
+        ],
+        "kassalapp": {
+            "url": "https://kassal.app/vare/35709-chateaubriand-av-storfe-indrefilet-pr-kg-2000681200001",
+            "opengraph": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/opengraph/products/35709.jpg"
+        },
+        "created_at": "2023-04-23T10:01:32.000000Z",
+        "updated_at": "2023-04-23T10:01:32.000000Z"
+    },
+    "8412164000024": {
+        "id": 70204,
+        "name": "Kyllingbuljong",
+        "vendor": null,
+        "brand": "CalNort",
+        "description": "Kyllingbuljong 120gInneholder 12 buljongterninger",
+        "ingredients": null,
+        "url": "https://shop.havaristen.no/products/kyllingbuljong",
+        "image": "https://havaristen-i02.mycdn.no/mysimgprod/havaristen_mystore_no/images/tjsA1_CalNort_Kyllingbuljong_1.jpg/w600h600.jpg",
+        "store": {
+            "name": "Havaristen",
+            "code": "HAVARISTEN",
+            "url": "https://havaristen.no/",
+            "logo": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/logos/Havaristen.svg"
+        },
+        "current_price": {
+            "price": 15,
+            "date": "2023-04-23T10:01:46.000000Z"
+        },
+        "price_history": [
+            {
+                "price": 15,
+                "date": "2023-04-23T10:01:46.000000Z"
+            },
+            {
+                "price": 15,
+                "date": "2023-04-23T00:43:10.000000Z"
+            },
+            {
+                "price": 15,
+                "date": "2023-04-21T11:46:47.000000Z"
+            },
+            {
+                "price": 15,
+                "date": "2023-04-20T10:53:39.000000Z"
+            },
+            {
+                "price": 15,
+                "date": "2023-04-19T11:44:42.000000Z"
+            },
+            {
+                "price": 15,
+                "date": "2023-04-18T09:25:43.000000Z"
+            },
+            {
+                "price": 15,
+                "date": "2023-04-17T14:31:21.000000Z"
+            },
+            {
+                "price": 15,
+                "date": "2023-04-16T05:33:17.000000Z"
+            },
+            {
+                "price": 15,
+                "date": "2023-04-14T09:45:11.000000Z"
+            },
+            {
+                "price": 15,
+                "date": "2023-04-13T13:43:50.000000Z"
+            },
+            {
+                "price": 15,
+                "date": "2023-04-13T12:55:15.000000Z"
+            },
+            {
+                "price": 15,
+                "date": "2023-04-13T04:20:04.000000Z"
+            }
+        ],
+        "kassalapp": {
+            "url": "https://kassal.app/vare/70204-kyllingbuljong-8412164000024",
+            "opengraph": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/opengraph/products/70204.jpg"
+        },
+        "created_at": "2023-04-23T10:01:46.000000Z",
+        "updated_at": "2023-04-23T10:01:46.000000Z"
+    },
+    "4062300253520": {
+        "id": 63393,
+        "name": "Ris Gr\u00f8nssaker&Kylling 6mnd 190g Hipp",
+        "vendor": "Arvid nordquist norge",
+        "brand": "Hipp",
+        "description": null,
+        "ingredients": "Vann, gulrot, 24%, kokt ris 15%, tomat 11%, erter 10%, kylling 8%, rapsolje, l\u00f8k.",
+        "url": "https://kiwi.no/aktuelt/dagligvarer/#4062300253520",
+        "image": "https://bilder.ngdata.no/4062300253520/kiwi/large.jpg",
+        "store": {
+            "name": "KIWI",
+            "code": "KIWI",
+            "url": "https://kiwi.no/",
+            "logo": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/logos/Kiwi.svg"
+        },
+        "current_price": {
+            "price": 15.4,
+            "date": "2023-04-13T06:59:42.000000Z"
+        },
+        "price_history": [
+            {
+                "price": 15.4,
+                "date": "2023-04-13T06:59:42.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-04-13T02:20:51.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-04-12T08:11:03.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-04-11T07:44:54.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-04-09T22:29:22.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-04-08T08:26:25.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-04-05T11:13:21.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-04-04T18:27:53.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-04-03T07:02:16.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-04-02T21:50:19.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-04-01T12:21:01.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-03-30T11:29:10.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-02-14T08:23:11.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-02-10T22:46:43.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-02-09T15:54:43.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-02-09T15:30:10.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-02-08T21:49:40.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-02-06T08:27:25.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-02-05T08:59:15.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-02-04T09:23:50.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-02-04T09:22:22.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-02-03T10:29:13.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-02-02T07:13:02.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-02-01T09:31:43.000000Z"
+            },
+            {
+                "price": 15.4,
+                "date": "2023-01-31T12:30:05.000000Z"
+            }
+        ],
+        "kassalapp": {
+            "url": "https://kassal.app/vare/63393-ris-gronssakerkylling-6mnd-190g-hipp-4062300253520",
+            "opengraph": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/opengraph/products/63393.jpg"
+        },
+        "created_at": "2023-04-13T06:59:42.000000Z",
+        "updated_at": "2023-04-13T06:59:42.000000Z"
+    },
+    "7039010011129": {
+        "id": 60376,
+        "name": "Kyllingpostei 100g Stabburet",
+        "vendor": "Orkla foods norge as",
+        "brand": "Stabburet",
+        "description": null,
+        "ingredients": "Vann, lever av kylling 27%, mekanisk utbenet kyllingkj\u00f8tt 23 %, hvetemel, rapsolje, melkeprotein, salt, glukose, sitrusfiber, ansjos, sukker, tomatpur\u00e9, fortykningsmiddel (karragenan, johannesbr\u00f8dkjernemel), surhetsregulerende middel (natriumsitrat, kaliumklorid), krydder, antioksidant (askorbinsyre), gj\u00e6rekstrakt, aroma,   konserveringsmiddel (natriumnitritt).",
+        "url": "https://kiwi.no/aktuelt/dagligvarer/#7039010011129",
+        "image": "https://bilder.ngdata.no/7039010011129/kiwi/large.jpg",
+        "store": {
+            "name": "KIWI",
+            "code": "KIWI",
+            "url": "https://kiwi.no/",
+            "logo": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/logos/Kiwi.svg"
+        },
+        "current_price": {
+            "price": 15.5,
+            "date": "2023-04-13T06:59:48.000000Z"
+        },
+        "price_history": [
+            {
+                "price": 15.5,
+                "date": "2023-04-13T06:59:48.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-04-13T02:20:34.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-04-12T08:10:50.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-04-11T07:44:46.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-04-09T22:29:08.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-04-08T08:26:19.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-04-05T11:13:15.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-04-04T18:27:38.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-04-03T07:02:22.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-04-02T21:50:02.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-04-01T12:21:20.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-03-30T11:29:12.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-03-28T22:15:49.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-03-28T08:47:14.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-03-27T04:40:49.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-03-25T18:24:11.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-03-24T19:25:19.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-03-23T09:18:22.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-03-22T10:44:48.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-03-20T03:57:26.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-03-18T11:52:32.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-03-17T11:24:03.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-03-15T09:52:12.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-03-13T07:54:30.000000Z"
+            },
+            {
+                "price": 15.5,
+                "date": "2023-03-09T11:43:01.000000Z"
+            }
+        ],
+        "kassalapp": {
+            "url": "https://kassal.app/vare/60376-kyllingpostei-100g-stabburet-7039010011129",
+            "opengraph": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/opengraph/products/60376.jpg"
+        },
+        "created_at": "2023-04-13T06:59:48.000000Z",
+        "updated_at": "2023-04-13T06:59:48.000000Z"
+    },
+    "4008429046483": {
+        "id": 62621,
+        "name": "Whiskas Sticks Kylling 18g",
+        "vendor": "Mars norge as",
+        "brand": "Whiskas",
+        "description": "Finnes i smaksvarianterne kylling (inneholder 80% kj\u00f8tt) eller laks (h\u00f8y i Omega 3). Hver stick er individuelt pakket for \u00e5 sikre maksimal ferskhet.",
+        "ingredients": null,
+        "url": "https://kiwi.no/aktuelt/dagligvarer/#4008429046483",
+        "image": "https://bilder.ngdata.no/4008429046483/kiwi/large.jpg",
+        "store": {
+            "name": "KIWI",
+            "code": "KIWI",
+            "url": "https://kiwi.no/",
+            "logo": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/logos/Kiwi.svg"
+        },
+        "current_price": {
+            "price": 13.8,
+            "date": "2023-04-13T06:59:28.000000Z"
+        },
+        "price_history": [
+            {
+                "price": 13.8,
+                "date": "2023-04-13T06:59:28.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-04-13T02:20:56.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-04-12T08:11:03.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-04-11T07:45:01.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-04-09T22:29:10.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-04-08T08:26:32.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-04-05T11:13:19.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-04-04T18:27:38.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-04-03T07:02:25.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-04-02T21:50:12.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-04-01T12:20:59.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-03-30T11:28:41.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-03-28T22:15:51.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-03-28T08:47:15.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-03-27T04:40:29.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-03-25T18:23:59.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-03-24T19:24:51.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-03-23T09:17:31.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-03-22T10:44:07.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-03-20T03:57:46.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-03-18T11:52:17.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-03-17T11:23:39.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-03-15T09:52:08.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-03-13T07:54:23.000000Z"
+            },
+            {
+                "price": 13.8,
+                "date": "2023-03-09T11:43:33.000000Z"
+            }
+        ],
+        "kassalapp": {
+            "url": "https://kassal.app/vare/62621-whiskas-sticks-kylling-18g-4008429046483",
+            "opengraph": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/opengraph/products/62621.jpg"
+        },
+        "created_at": "2023-04-13T06:59:28.000000Z",
+        "updated_at": "2023-04-13T06:59:28.000000Z"
+    },
+    "8585002441300": {
+        "id": 61590,
+        "name": "Kyllingbuljong Klar 80g Maggi",
+        "vendor": "Nestle norge",
+        "brand": "Maggi",
+        "description": "F\u00e5 mer ut av m\u00e5ltidet med MAGGI kyllingbuljongterninger laget av frittg\u00e5ende h\u00f8ner, uten palmeolje og laktose, og med mindre salt. Terningene er n\u00f8ye blandet for \u00e5 gi en rik smak av kylling og kan brukes som base for supper, sauser, risotto og pastaretter",
+        "ingredients": "Mineralsalt (natriumklorid, kaliumklorid, kaliumjodat), sukker/socker, potetstivelse/potatisst\u00e4rkelse, aromaer/aromer (inneh. hvete/vete/hvede, selleri), sheaolje-/olja stearin [sheaolje/-olja, antioksidanter/antioxidationsmedel (tokoferolrik ekstrakt/tokoferolrika extrakt)], hvete-/veteproteinhydrolysat (gluten, salt, vegetabilsk olje/olja (solsikke/solros), kylling-/kycklingfett 2,1 %, salt, kylling-/kycklingextrakt 0,8%, gurkemeie/gurkmeja, gulrot/morot, persille/persilja, antioksidanter/antioxidationsmedel (ekstrakter/extrakt av rosmarin).",
+        "url": "https://kiwi.no/aktuelt/dagligvarer/#8585002441300",
+        "image": "https://bilder.ngdata.no/8585002441300/kiwi/large.jpg",
+        "store": {
+            "name": "KIWI",
+            "code": "KIWI",
+            "url": "https://kiwi.no/",
+            "logo": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/logos/Kiwi.svg"
+        },
+        "current_price": {
+            "price": 13.9,
+            "date": "2023-04-14T09:01:01.000000Z"
+        },
+        "price_history": [
+            {
+                "price": 13.9,
+                "date": "2023-04-14T09:01:01.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-13T09:01:02.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-13T06:59:28.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-13T02:21:03.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-12T09:01:37.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-12T08:10:58.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-11T09:01:08.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-11T07:45:01.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-10T09:01:21.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-09T22:29:09.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-09T09:01:29.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-08T09:01:07.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-08T08:26:22.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-07T09:01:28.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-06T09:01:32.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-05T11:13:15.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-05T09:01:07.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-04T18:27:46.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-04T09:01:26.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-03T09:01:23.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-03T07:02:17.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-02T21:50:15.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-02T09:01:24.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-01T12:21:22.000000Z"
+            },
+            {
+                "price": 13.9,
+                "date": "2023-04-01T09:01:24.000000Z"
+            }
+        ],
+        "kassalapp": {
+            "url": "https://kassal.app/vare/61590-kyllingbuljong-klar-80g-maggi-8585002441300",
+            "opengraph": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/opengraph/products/61590.jpg"
+        },
+        "created_at": "2023-04-14T09:01:01.000000Z",
+        "updated_at": "2023-04-14T09:01:01.000000Z"
+    },
+    "7035620046407": {
+        "id": 64640,
+        "name": "Fauna Katt V\u00e5tfor Kylling&Storfe 90g",
+        "vendor": "Unil",
+        "brand": "Fauna",
+        "description": null,
+        "ingredients": "Sammensetning: kylling 23 %, storfe 16 %, rismel, mineraler, hydrolisert fiskeprotein, gj\u00e6r, xylose, dekstrose",
+        "url": "https://kiwi.no/aktuelt/dagligvarer/#7035620046407",
+        "image": "https://bilder.ngdata.no/7035620046407/kiwi/large.jpg",
+        "store": {
+            "name": "KIWI",
+            "code": "KIWI",
+            "url": "https://kiwi.no/",
+            "logo": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/logos/Kiwi.svg"
+        },
+        "current_price": {
+            "price": 12.9,
+            "date": "2023-04-13T06:59:39.000000Z"
+        },
+        "price_history": [
+            {
+                "price": 12.9,
+                "date": "2023-04-13T06:59:39.000000Z"
+            },
+            {
+                "price": 12.9,
+                "date": "2023-04-13T02:20:50.000000Z"
+            },
+            {
+                "price": 12.9,
+                "date": "2023-04-12T08:11:01.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-04-11T07:44:53.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-04-09T22:29:19.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-04-08T08:26:13.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-04-05T11:13:12.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-04-04T18:27:52.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-04-03T07:02:18.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-04-02T21:50:10.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-04-01T12:21:07.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-03-30T11:29:17.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-03-28T22:15:49.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-03-28T08:47:13.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-03-27T04:40:50.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-03-25T18:24:19.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-03-24T19:24:44.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-03-23T09:18:17.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-03-22T10:44:58.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-02-10T22:46:28.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-02-09T15:55:23.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-02-09T15:54:06.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-02-09T15:29:45.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-02-08T21:49:34.000000Z"
+            },
+            {
+                "price": 11.4,
+                "date": "2023-02-07T10:41:50.000000Z"
+            }
+        ],
+        "kassalapp": {
+            "url": "https://kassal.app/vare/64640-fauna-katt-vatfor-kyllingstorfe-90g-7035620046407",
+            "opengraph": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/opengraph/products/64640.jpg"
+        },
+        "created_at": "2023-04-13T06:59:39.000000Z",
+        "updated_at": "2023-04-13T06:59:39.000000Z"
+    },
+    "7622210750174": {
+        "id": 65741,
+        "name": "P\u00e5skekompiser 120g Freia",
+        "vendor": "Mondelez norge as",
+        "brand": "Freia",
+        "description": "Freia P\u00e5skekompiser er en pose best\u00e5ende av 10 innpakkede sjokolader laget av Freia Melkesjokolade. Passer perfekt til p\u00e5skeegget!\nLes om COCOA LIFE p\u00e5 www.freia.no/baerekraft",
+        "ingredients": "Sukker, t\u00f8rrmelk, kakaosm\u00f8r, kakaomasse, emulgator (soyalecitiner), aroma",
+        "url": "https://kiwi.no/aktuelt/dagligvarer/#7622210750174",
+        "image": "https://bilder.ngdata.no/7622210750174/kiwi/large.jpg",
+        "store": {
+            "name": "KIWI",
+            "code": "KIWI",
+            "url": "https://kiwi.no/",
+            "logo": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/logos/Kiwi.svg"
+        },
+        "current_price": {
+            "price": 7.8,
+            "date": "2023-04-13T06:59:47.000000Z"
+        },
+        "price_history": [
+            {
+                "price": 7.8,
+                "date": "2023-04-13T06:59:47.000000Z"
+            },
+            {
+                "price": 7.8,
+                "date": "2023-04-13T02:20:50.000000Z"
+            },
+            {
+                "price": 7.8,
+                "date": "2023-04-12T08:11:08.000000Z"
+            },
+            {
+                "price": 7.8,
+                "date": "2023-04-11T07:45:00.000000Z"
+            },
+            {
+                "price": 15.8,
+                "date": "2023-04-09T22:29:20.000000Z"
+            },
+            {
+                "price": 15.8,
+                "date": "2023-04-08T08:26:27.000000Z"
+            },
+            {
+                "price": 15.8,
+                "date": "2023-04-05T11:12:58.000000Z"
+            },
+            {
+                "price": 15.8,
+                "date": "2023-04-04T18:27:34.000000Z"
+            },
+            {
+                "price": 15.8,
+                "date": "2023-04-03T07:02:34.000000Z"
+            },
+            {
+                "price": 15.8,
+                "date": "2023-04-02T21:50:10.000000Z"
+            },
+            {
+                "price": 15.8,
+                "date": "2023-04-01T12:21:13.000000Z"
+            },
+            {
+                "price": 15.8,
+                "date": "2023-03-30T11:28:55.000000Z"
+            },
+            {
+                "price": 20.9,
+                "date": "2023-03-28T22:15:39.000000Z"
+            },
+            {
+                "price": 20.9,
+                "date": "2023-03-28T14:40:29.000000Z"
+            },
+            {
+                "price": 23.4,
+                "date": "2023-03-28T13:43:04.000000Z"
+            },
+            {
+                "price": 23.4,
+                "date": "2023-03-28T13:33:35.000000Z"
+            },
+            {
+                "price": 28.9,
+                "date": "2023-03-28T08:47:16.000000Z"
+            },
+            {
+                "price": 29.9,
+                "date": "2023-03-27T04:40:46.000000Z"
+            },
+            {
+                "price": 29.9,
+                "date": "2023-03-25T18:23:56.000000Z"
+            },
+            {
+                "price": 29.9,
+                "date": "2023-03-24T19:25:20.000000Z"
+            },
+            {
+                "price": 29.9,
+                "date": "2023-03-23T09:18:09.000000Z"
+            },
+            {
+                "price": 38.1,
+                "date": "2023-03-22T10:44:49.000000Z"
+            },
+            {
+                "price": 44.9,
+                "date": "2023-03-20T03:57:42.000000Z"
+            },
+            {
+                "price": 44.9,
+                "date": "2023-03-18T11:52:40.000000Z"
+            },
+            {
+                "price": 44.9,
+                "date": "2023-03-17T11:24:07.000000Z"
+            }
+        ],
+        "kassalapp": {
+            "url": "https://kassal.app/vare/65741-paskekompiser-120g-freia-7622210750174",
+            "opengraph": "https://cdn.kassal.app/2776ddc7-a286-43a3-8bb7-fe3a70c94209/opengraph/products/65741.jpg"
+        },
+        "created_at": "2023-04-13T06:59:47.000000Z",
+        "updated_at": "2023-04-13T06:59:47.000000Z"
+    }
+}

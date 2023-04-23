@@ -8,42 +8,15 @@ import json
 app = Flask(__name__)
 
 
-# Fungerer ikke, må se nermere på dette.
-
-# fil_historikk = open("historikk.json")
-# historikk = json.load(fil_historikk)
-# fil_historikk.close()
-
-# historikk_liste = []
-
-# def lagre_historikk():
-#     fil_historikk = open("historikk.json", "w") # Åpner filen slik at jeg kan skrive ting inn i den.
-#     json.dump(historikk_liste, fil_historikk)
-#     fil_historikk.close()
-
-
-# historikk_liste.append(s)
-# lagre_historikk()
-
 fil = open("favorittprodukter.json")
 favoritter = json.load(fil)
 fil.close()
 
-
 def endre_favoritter():
+    formatert_favoritter = json.dumps(favoritter, indent=4) # formaterer ordboka slik at den er lett å lese i json-filen
     fil = open("favorittprodukter.json", "w") # åpner i 'write' modus
-    json.dump(favoritter, fil)
+    fil.write(formatert_favoritter) # skriver til filen.
     fil.close()
-
-
-# def lagre_produkt(produkt):
-#     fil = open("favorittprodukter.json", "w") # åpner i 'write' modus
-#     data = hent_data_ean(produkt)
-#     data = data["data"]
-#     produkt_info = {produkt: data} # lager en ordbok med ean-koden som key, og all dataen til produktet som value
-#     json.dump(produkt_info, fil)
-#     fil.close()
-
 
 
 
@@ -154,11 +127,9 @@ def rute_produkt(ean):
 def legg_i_favoritter():
     produkt_kode = request.form.get("produkt")
     data = hent_data_ean(produkt_kode)
-    data = data["data"]
-
-    favoritter[produkt_kode] = data
-
-    # favoritter.append(produkt_kode)
+    sortert_products = sorted(data["data"]["products"], key=lambda element: element["current_price"]["price"]) # sorterer etter prisen.
+    
+    favoritter[produkt_kode] = sortert_products[0] # index 0 er det billigste produktet, jeg trenger bare dette i json-filen.
     endre_favoritter()
     return redirect(request.referrer) # returnerer den siden som 'refererer' deg til post-requesten.
 
@@ -166,8 +137,6 @@ def legg_i_favoritter():
 def fjern_fra_favoritter():
     produkt_kode = request.form.get("produkt")
     del favoritter[produkt_kode]
-
-    # favoritter.remove(produkt_kode)
     endre_favoritter()
     return redirect(request.referrer)
 
