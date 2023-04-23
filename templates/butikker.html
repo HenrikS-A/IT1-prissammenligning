@@ -1,11 +1,64 @@
 {% extends 'mal.html' %}
 
+{% block tittel %}Butikker{% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{{ url_for('static',filename='butikker.css' ) }}"> {% endblock %}
+
 {% block main %}
-    {{ koordinater }}
+    <div class="overskrift">
+        <h1>Butikker i nærheten av deg</h1>
+        <p>* med forbehold om (store) avvik mtp. avstand</p>
+    </div>
+    
 
-    {% for butikk in butikker %}
+    <div class="gridContainer">
+        {% for butikk in butikker %}
         
-        <p> {{ butikk["name"] }} </p>
+            <a class="butikk" href="{{ butikk['website'] }}" target="_blank">
+                <div>
+                    <div>
+                        <img src="{{ butikk['logo'] }}" alt="Logo til {{ butikk['name'] }}">
+                    </div>
+                    <div>
+                        <h3>{{ butikk["name"] }}</h3>
+                        <p class="butikkInfo">Adresse: {{ butikk["address"] }}</p>
+                        <p class="butikkInfo">Telefon: {{ butikk["phone"] }}</p>
+                    </div>
+                </div>
+                <div class="aapningstider">
+                    <h4>Åpningstider:</h4>
+                    <ul>
+                        {% for dag, tid in butikk["openingHours"].items() %}
+                            <li>
+                                {% if dag == "monday" %}
+                                    Mandag  -  {{ tid }}
+                                {% elif dag == "tuesday" %}
+                                    Tirsdag  -  {{ tid }}
+                                {% elif dag == "wednesday" %}
+                                    Onsdag  -  {{ tid }}
+                                {% elif dag == "thursday" %}
+                                    Torsdag  -  {{ tid }}
+                                {% elif dag == "friday" %}
+                                    Fredag  -  {{ tid }}
+                                {% elif dag == "saturday" %}
+                                    Lørdag  -  {{ tid }}
+                                {% else %}
+                                    {% if tid == None %}
+                                        Søndag  -  stengt
+                                    {% else %}
+                                        Søndag  -  {{ tid }}
+                                    {% endif %}
+                                {% endif %}
+                                
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    
+                </div>
+                
+            </a>
 
-    {% endfor %}
+        {% endfor %}
+    </div>
+    
 {% endblock %}

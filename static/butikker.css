@@ -1,0 +1,49 @@
+.overskrift {
+    text-align: center;
+    color: rgb(8, 41, 57);
+}
+.overskrift p {
+    font-size: 9px;
+    margin-top: 10px;
+}
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 50px;
+    gap: 40px;
+}
+.butikk{
+    background-color: rgb(234, 230, 224);
+    border: 2px solid rgba(8, 41, 57, 0.1);
+    padding: 20px;
+    text-decoration: none;
+    color: rgb(8, 41, 57);
+    display: flex;
+}
+.butikk:hover {
+    border: 2px solid rgba(8, 41, 57, 1);
+    transform: scale(1.01);
+}
+
+.butikk img {
+    width: 85%;
+}
+.butikk>div {
+    width: 50%;
+}
+.butikk h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.butikkInfo {
+    margin-top: 2px;
+}
+.aapningstider h4{
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size: 17px;
+}
+.aapningstider ul {
+    margin-left: 50px;
+    margin-top: 20px;
+}

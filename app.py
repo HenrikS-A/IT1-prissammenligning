@@ -153,7 +153,7 @@ def rute_butikker():
     posisjon = finn_posisjon()
     koordinater = [posisjon["location"]["latitude"], posisjon["location"]["longitude"]]
 
-    butikker = hent_butikker(koordinater[0], koordinater[1], 15) # Det siste tallet er radius fra koordinatene der den skal lete etter butikker
+    butikker = hent_butikker(koordinater[0], koordinater[1], 15) # 15km radius fra koordinatene
 
     return render_template("butikker.html", koordinater=koordinater, butikker=butikker["data"]) 
 
