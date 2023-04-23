@@ -4,31 +4,30 @@ from datetime import datetime
 
 
 def lag_graf(produktliste):
-
-    all_prishistorikk = []
     labels = []
 
     # Lagrer all data om prishistorikk
+    all_prishistorikk = []
     for produkt in produktliste:
         all_prishistorikk.append(produkt["price_history"])
 
-    # Finner den lengste liste-lengden
+    # Finner den lengste liste-lengden (for å få ALLE datoene)
     listelengde = [len(i) for i in all_prishistorikk]
     lengste_listelengde = max(listelengde)
 
-    # Legger inn bare den lengste listen inn i listen labels.
+    # Finner dataen til den lengste listen
     for historikk in all_prishistorikk:
         if len(historikk) == lengste_listelengde:
             prishistorikk = historikk   # lagrer listen i variabelen prishistorikk.
 
     # legger inn datoene i labels så jeg får datapunkter på x-aksen på grafen.
-    for iso_tid in prishistorikk:
-        tid = iso_tid["date"].replace("Z", "")   # Fjerner Z for at jeg kan bruke datetime
-        tid = datetime.fromisoformat(tid)
+    for tiden in prishistorikk:
+        tid = tiden["date"].replace("Z", "")   # Fjerner Z for at jeg kan bruke datetime
+        tid = datetime.fromisoformat(tid) # Gjør om formateringen slik at jeg lett kan finne datoer.
 
         # Finner dag og måned
-        m = str(tid.month)
         d = str(tid.day)
+        m = str(tid.month)
         
         dato = d + "/" + m  # Kombinerer dag og måned i norsk format
         labels.append(dato) # Legger inn datoene i listen labels for å få akseverdiene.
@@ -37,12 +36,11 @@ def lag_graf(produktliste):
     labels.reverse()
 
 
-
-    # Her lager jeg dataen jeg skal vise på grafen i datasets-lista
+    # Her finner jeg dataen jeg skal vise på grafen i datasets-lista
     datasets = []
     for produkt in produktliste:
 
-        # Jeg vil ha farger som gjør at man kjenner igjen butikken
+        # Jeg vil ha bestemte farger som gjør at man kjenner igjen butikken, jeg har bestemt farge på bare de vanligste butikkene
         if produkt["store"]["name"].lower() == "meny":
             farge = "rgb(230, 0, 0)"
         elif produkt["store"]["name"].lower() == "oda":
@@ -58,10 +56,15 @@ def lag_graf(produktliste):
         else:
             farge = "rgb(0, 0, 0)"
 
+        # Prishistorikken til det enkelte produktet
         data = []
         for pris in produkt["price_history"]:
             data.append(pris["price"])
 
+        # Data kom også inn feil vei, jeg reverserer
+        data.reverse()
+
+        # Det er dette api-et skal ta imot
         info = {
             'label': produkt["store"]["name"],
             'backgroundColor': farge,
@@ -69,7 +72,7 @@ def lag_graf(produktliste):
             'fill': False,
             'data': data
         }
-        datasets.append(info)
+        datasets.append(info) # Datasets er en liste med info-ordbøker
 
 
     url = 'https://quickchart.io/chart/create'
@@ -97,5 +100,5 @@ def lag_graf(produktliste):
         json=post_data,
     )
 
-    graf_response = json.loads(respons.text)
-    return graf_response
+    graf_respons = json.loads(respons.text)
+    return graf_respons

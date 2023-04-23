@@ -26,8 +26,7 @@ def hent_data(soek=None, sidetall=None, merke=None, sortering=None):
 
 
 def hent_data_ean(ean):
-
-    url = f"https://kassal.app/api/v1/products/ean/{ean}" # Annen måte å legge inn parametere
+    url = f"https://kassal.app/api/v1/products/ean/{ean}" # Annen måte å legge inn parametere, her skal jeg bare ha 1'
 
     authToken = "kl5WOZbtvjPcPpLLnKYABpyQ22DnWav7ORT4ARat"
     headers = {
@@ -42,7 +41,6 @@ def hent_data_ean(ean):
 
 
 def hent_butikker(lat, lng, km=None):
-
     url = "https://kassal.app/api/v1/physical-stores"
 
     parametere = {
@@ -70,9 +68,5 @@ def hent_butikker(lat, lng, km=None):
 
 
 # Bruk dette for å lettere kunne lese printet data i json format:
-
-
-## a = hent_api("Appelsin", sortering="price_desc")
-
 ## import json
 ## print(json.dumps(a, indent=4))

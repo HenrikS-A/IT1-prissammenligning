@@ -235,8 +235,7 @@ main {
 
 #graf {
     padding: 40px 100px 80px 100px;
-    border: solid 1px rgba(8, 41, 57, 0.4);
-    border-radius: 5px;
+    border: solid 2px rgb(234, 230, 224);
     width: 750px;
 }
 .produktSection>p {
