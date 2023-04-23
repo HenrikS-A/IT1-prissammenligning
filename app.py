@@ -25,8 +25,26 @@ app = Flask(__name__)
 # historikk_liste.append(s)
 # lagre_historikk()
 
+fil = open("favorittprodukter.json")
+favoritter = json.load(fil)
+fil.close()
 
-favoritter = []
+
+def endre_favoritter():
+    fil = open("favorittprodukter.json", "w") # åpner i 'write' modus
+    json.dump(favoritter, fil)
+    fil.close()
+
+
+# def lagre_produkt(produkt):
+#     fil = open("favorittprodukter.json", "w") # åpner i 'write' modus
+#     data = hent_data_ean(produkt)
+#     data = data["data"]
+#     produkt_info = {produkt: data} # lager en ordbok med ean-koden som key, og all dataen til produktet som value
+#     json.dump(produkt_info, fil)
+#     fil.close()
+
+
 
 
 @app.get("/")
@@ -135,24 +153,32 @@ def rute_produkt(ean):
 @app.post("/legg-i-favoritter")
 def legg_i_favoritter():
     produkt_kode = request.form.get("produkt")
-    favoritter.append(produkt_kode)
+    data = hent_data_ean(produkt_kode)
+    data = data["data"]
+
+    favoritter[produkt_kode] = data
+
+    # favoritter.append(produkt_kode)
+    endre_favoritter()
     return redirect(request.referrer) # returnerer den siden som 'refererer' deg til post-requesten.
 
 @app.post("/fjern-fra-favoritter")
 def fjern_fra_favoritter():
     produkt_kode = request.form.get("produkt")
-    favoritter.remove(produkt_kode)
+    del favoritter[produkt_kode]
+
+    # favoritter.remove(produkt_kode)
+    endre_favoritter()
     return redirect(request.referrer)
-
-
 
 
 @app.get("/butikker")
 def rute_butikker():
-
+    # Finner posisjonen og lagrer koordniatene
     posisjon = finn_posisjon()
     koordinater = [posisjon["location"]["latitude"], posisjon["location"]["longitude"]]
 
+    # Henter info om butikkene
     butikker = hent_butikker(koordinater[0], koordinater[1], 15) # 15km radius fra koordinatene
 
     return render_template("butikker.html", koordinater=koordinater, butikker=butikker["data"]) 
