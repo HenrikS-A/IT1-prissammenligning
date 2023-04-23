@@ -23,7 +23,6 @@ main {
     color: rgb(8, 41, 57);
     background-color: white;
     outline: none; /* Fjerner den stygge borderen når den er markert */
-
 }
 #soek input:focus {
     background-color: rgb(241, 240, 238);
@@ -62,7 +61,6 @@ main {
 #soek input[type="search"]::-webkit-search-cancel-button,
 #soek input[type="search"]::-webkit-search-results-button,
 #soek input[type="search"]::-webkit-search-results-decoration { display: none; }
-
 
 
 #hurtigsoek {

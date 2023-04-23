@@ -3,11 +3,13 @@
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
 }
-
 body {
     background-color: rgb(247, 246, 244);
 }
-
+main {
+    padding: 40px;
+    min-height: 80vh;
+}
 .aktivUnderside {
     border-bottom: solid 3px rgb(8, 41, 57);
 }
@@ -19,8 +21,6 @@ header {
     align-items: center;
     justify-content: center;
     position: relative;
-
-    /* border-bottom: 1px solid rgb(8, 41, 57);  /* VET IKKE OM JEG SKAL HA DENNE ELLER IKKE */
 }
 
 header nav {
@@ -134,13 +134,3 @@ footer>p {
     font-weight: 200;
     font-size: 14px;
 }
-
-
-
-main {
-    padding: 40px;
-    min-height: 80vh;
-}
-
-
-

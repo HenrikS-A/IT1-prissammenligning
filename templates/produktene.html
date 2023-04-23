@@ -15,9 +15,6 @@
         <h1>Alle produkter</h1>
     {% endif %}
 
-
-    
-
     {% if ingen_produkter %}
         <h4 id="ingenProdukterTekst">
             Søket ditt ga ingen treff. Prøv å søke på noe annet, <br> eller gå til forrige side.
@@ -45,8 +42,6 @@
                             </button>
                         </form>
                     {% endif %}
-                    
-                    
                     
                     <div class="produktbildeContainer">
                         <img src="{{ produkt['data']['products']['image'] }}" alt="Produktbilde: {{ produkt['data']['products']['name'] }}">

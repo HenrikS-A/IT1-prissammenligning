@@ -60,13 +60,3 @@ def hent_butikker(lat, lng, km=None):
     data = respons.json()
 
     return data
-
-
-
-
-
-
-
-# Bruk dette for å lettere kunne lese printet data i json format:
-## import json
-## print(json.dumps(a, indent=4))
