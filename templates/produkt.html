@@ -66,7 +66,7 @@
 
         <img id="graf" src="{{ graf_src }}" alt="Prishistorikk for:{{ billigst['name'] }}">
 
-        <p>* Grafen er laget med QuickCharts api </p>
+        <p>* Grafen er laget med QuickChart</p>
     </section>
 
     <section class="produktSection">
@@ -76,7 +76,7 @@
             <div onclick="skjul_vis(0)">
                 <div class="merKnapp" >
                     <h2>Info</h2>
-                    <div class="arrow-down"></div>
+                    <div class="arrow-down" id="pil0"></div>
                 </div>
                 <div class="merInnhold">
                     <h6>Produktnavn:</h6>
@@ -94,7 +94,7 @@
             <div onclick="skjul_vis(1)">
                 <div class="merKnapp" >
                     <h2>Næringsinnhold</h2>
-                    <div class="arrow-down"></div>
+                    <div class="arrow-down" id="pil1"></div>
                 </div>
                 <div class="merInnhold">
                     <h5>Næringsinnhold per 100g av matvaren</h5>
@@ -108,7 +108,7 @@
             <div onclick="skjul_vis(2)">
                 <div class="merKnapp">
                     <h2>Allergener</h2>
-                    <div class="arrow-down"></div>
+                    <div class="arrow-down" id="pil2"></div>
                 </div>
                 <div class="merInnhold">
                     {% if antall_allergener == 0 %}

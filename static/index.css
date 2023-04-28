@@ -55,7 +55,6 @@ main {
 }
 
 /* Det er en x helt til høyre i et search-felt. Jeg fant dette på nettet som fjerner den:
-
 /* clears the ‘X’ from Chrome */
 #soek input[type="search"]::-webkit-search-decoration,
 #soek input[type="search"]::-webkit-search-cancel-button,

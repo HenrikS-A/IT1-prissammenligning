@@ -64,7 +64,7 @@ def rute_produkter():
             # Denne sorterer listen etter pris-elementet som ligger i en liste og flere ordbøker
             # sorted tar en liste og returnerer en ny liste i stigende rekkefølge
             # sorted tar også imot en key for å bestemme sorteringen, her lambda
-            # Lambda er en funksjon som finner elementet jeg vil ha og returnerer prisen, og som sorted() bruker for å sortere etter riktig ting.
+            # Lambda er en funksjon som finner elementet jeg vil ha (["current_price"]["price"]) og returnerer prisen, og som sorted() bruker for å sortere etter riktig ting.
             sortert_products = sorted(produkt_data["data"]["products"], key=lambda element: element["current_price"]["price"])
 
             billigste_produkt = sortert_products[0]
@@ -130,7 +130,7 @@ def legg_i_favoritter():
     
     favoritter[produkt_kode] = sortert_products[0] # index 0 er det billigste produktet, jeg trenger bare dette i json-filen.
     endre_favoritter()
-    return redirect(request.referrer) # returnerer den siden som 'refererer' deg til post-requesten.
+    return redirect(request.referrer) # returnerer den siden som 'refererer' deg til post-requesten. Da kan jeg endre favoritter fra mange steder.
 
 @app.post("/fjern-fra-favoritter")
 def fjern_fra_favoritter():

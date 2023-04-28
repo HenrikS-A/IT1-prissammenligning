@@ -3,6 +3,16 @@ import requests
 from datetime import datetime
 
 
+farger = {
+    "meny": "rgb(230, 0, 0)",
+    "oda": "rgb(255, 200, 80)",
+    "kiwi": "rgb(115, 200, 0)",
+    "spar": "rgb(0, 125, 0)",
+    "joker": "rgb(215, 200, 50)",
+    "coop": "rgb(35, 90, 150)"
+}
+
+
 def lag_graf(produktliste):
     labels = []
 
@@ -41,21 +51,12 @@ def lag_graf(produktliste):
     for produkt in produktliste:
 
         # Jeg vil ha bestemte farger som gjør at man kjenner igjen butikken, jeg har bestemt farge på bare de vanligste butikkene
-        if produkt["store"]["name"].lower() == "meny":
-            farge = "rgb(230, 0, 0)"
-        elif produkt["store"]["name"].lower() == "oda":
-            farge = "rgb(255, 200, 80)"
-        elif produkt["store"]["name"].lower() == "kiwi":
-            farge = "rgb(115, 200, 0)"
-        elif produkt["store"]["name"].lower() == "spar":
-            farge = "rgb(0, 125, 0)"
-        elif produkt["store"]["name"].lower() == "joker":
-            farge = "rgb(215, 200, 50)"
-        elif produkt["store"]["name"].lower() == "coop":
-            farge = "rgb(35, 90, 150)"
+        if produkt["store"]["name"].lower() in farger.keys():
+            farge = farger[produkt["store"]["name"].lower()]
         else:
             farge = "rgb(0, 0, 0)"
 
+            
         # Prishistorikken til det enkelte produktet
         data = []
         for pris in produkt["price_history"]:
